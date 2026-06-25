@@ -36,6 +36,39 @@
       "tags": ["dark", "light", "green", "nature", "calm"],
       "path": "shared-themes/forest-mist",
       "files": ["theme.json"]
+    },
+    {
+      "id": "blueongrey",
+      "name": "Blue on grey",
+      "description": "Flat grey theme with a blue accent and sharp corners. No distractions.",
+      "author": "Harold Masselink",
+      "tags": ["dark", "light", "flat", "minimal", "blue"],
+      "path": "shared-themes/blueongrey",
+      "files": ["theme.json"],
+      "previewDark": "shared-themes/blueongrey/preview-dark.png",
+      "previewLight": "shared-themes/blueongrey/preview-light.png"
+    },
+    {
+      "id": "highcontrast",
+      "name": "High Contrast",
+      "description": "True high-contrast theme for low-vision use — black/white with strong, vivid accents.",
+      "author": "Harold Masselink",
+      "tags": ["dark", "light", "high-contrast", "accessibility", "bold"],
+      "path": "shared-themes/highcontrast",
+      "files": ["theme.json"],
+      "previewDark": "shared-themes/highcontrast/preview-dark.png",
+      "previewLight": "shared-themes/highcontrast/preview-light.png"
+    },
+    {
+      "id": "glass",
+      "name": "Glass",
+      "description": "Frosted-glass look — a translucent window with see-through panels and soft rounded corners.",
+      "author": "Harold Masselink",
+      "tags": ["dark", "light", "translucent", "glass", "modern"],
+      "path": "shared-themes/glass",
+      "files": ["theme.json"],
+      "previewDark": "shared-themes/glass/preview-dark.png",
+      "previewLight": "shared-themes/glass/preview-light.png"
     }
   ]
 }

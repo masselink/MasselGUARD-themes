@@ -116,19 +116,19 @@ This is **implemented** in the app (Settings → Appearance → **Browse…**). 
 2. Renders a card per theme — `previewDark`/`previewLight` image (Dark/Light header toggle),
    `name`, `author`, `description`, `tags` chips + search.
 3. On **Install**, for each `f` in `t.files`:
-   `GET …/main/{t.path}/{f}` → save to `<install>/shared_themes/{t.id}/{f}`.
+   `GET …/main/{t.path}/{f}` → save to `<install>/shared-themes/{t.id}/{f}`.
 
 So: **filenames are case-sensitive** on raw.githubusercontent.com, paths are forward-slash,
 and the default branch should be `main` (`master` also works). The app validates `id` and each
-file path and will skip anything that tries to escape `shared_themes/<id>/`.
+file path and will skip anything that tries to escape `shared-themes/<id>/`.
 
 ## 5. The `theme.json` format
 
 Themes use MasselGUARD's **unified dual-variant** format: structural settings at the root,
 colours split into `"dark"` and `"light"` sections. The full key reference lives in the app
-repo at [`shared_themes/THEME_INFO.md`](https://github.com/masselink/MasselGUARD/blob/main/shared_themes/THEME_INFO.md);
+repo at [`shared-themes/THEME_INFO.md`](https://github.com/masselink/MasselGUARD/blob/main/shared-themes/THEME_INFO.md);
 copy concrete, fully-populated examples from the shipped themes
-(`shared_themes/blueongrey/theme.json`, `highcontrast/theme.json`, `glass/theme.json`).
+(`shared-themes/blueongrey/theme.json`, `highcontrast/theme.json`, `glass/theme.json`).
 
 Minimum a good theme should set:
 
@@ -187,6 +187,6 @@ Minimum a good theme should set:
 
 `Services/ThemeDownloadService.cs` reads `index.json` (`FetchManifestAsync`), fetches preview
 images (`FetchRawAsync`) and installs a theme's `files[]` over raw HTTPS into
-`shared_themes/<id>/` (`InstallThemeAsync`); `Views/ThemeBrowserWindow` is the wide pop-up.
+`shared-themes/<id>/` (`InstallThemeAsync`); `Views/ThemeBrowserWindow` is the wide pop-up.
 A legacy whole-repo `.zip` download path is retained only for arbitrary `.zip`/repo URLs typed
 manually — the manifest path above is the supported route for this repository.
