@@ -7,7 +7,7 @@
       "description": "Cyberpunk dual-variant theme with a vivid neon accent.",
       "author": "masselink",
       "tags": ["dark", "light", "neon", "cyberpunk", "high-contrast", "colorful"],
-      "path": "themes/neon-night",
+      "path": "shared-themes/neon-night",
       "files": ["theme.json"]
     },
     {
@@ -16,7 +16,7 @@
       "description": "Cool arctic palette with soft frost blues and aurora accents.",
       "author": "masselink",
       "tags": ["dark", "light", "blue", "cool", "minimal"],
-      "path": "themes/nord-aurora",
+      "path": "shared-themes/nord-aurora",
       "files": ["theme.json"]
     },
     {
@@ -25,7 +25,7 @@
       "description": "Warm, low-glare Solarized palette tuned for long sessions.",
       "author": "masselink",
       "tags": ["dark", "light", "warm", "low-contrast", "classic"],
-      "path": "themes/solarized",
+      "path": "shared-themes/solarized",
       "files": ["theme.json"]
     },
     {
@@ -34,7 +34,7 @@
       "description": "Calm forest greens with a soft mossy accent.",
       "author": "masselink",
       "tags": ["dark", "light", "green", "nature", "calm"],
-      "path": "themes/forest-mist",
+      "path": "shared-themes/forest-mist",
       "files": ["theme.json"]
     }
   ]

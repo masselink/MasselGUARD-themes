@@ -12,7 +12,7 @@ the files of the theme(s) the user installs. See
 
 ```
 index.json            manifest the app reads first
-themes/
+shared-themes/
   <theme-id>/
     theme.json        the theme definition (required)
     <assets…>         optional fonts/images, flat in the folder
