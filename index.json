@@ -7,7 +7,7 @@
       "description": "Cyberpunk dual-variant theme with a vivid neon accent.",
       "author": "masselink",
       "tags": ["dark", "light", "neon", "cyberpunk", "high-contrast", "colorful"],
-      "path": "shared-themes/neon-night",
+      "path": "themes/neon-night",
       "files": ["theme.json"]
     },
     {
@@ -16,7 +16,7 @@
       "description": "Cool arctic palette with soft frost blues and aurora accents.",
       "author": "masselink",
       "tags": ["dark", "light", "blue", "cool", "minimal"],
-      "path": "shared-themes/nord-aurora",
+      "path": "themes/nord-aurora",
       "files": ["theme.json"]
     },
     {
@@ -25,7 +25,7 @@
       "description": "Warm, low-glare Solarized palette tuned for long sessions.",
       "author": "masselink",
       "tags": ["dark", "light", "warm", "low-contrast", "classic"],
-      "path": "shared-themes/solarized",
+      "path": "themes/solarized",
       "files": ["theme.json"]
     },
     {
@@ -34,7 +34,7 @@
       "description": "Calm forest greens with a soft mossy accent.",
       "author": "masselink",
       "tags": ["dark", "light", "green", "nature", "calm"],
-      "path": "shared-themes/forest-mist",
+      "path": "themes/forest-mist",
       "files": ["theme.json"]
     },
     {
@@ -43,10 +43,10 @@
       "description": "Flat grey theme with a blue accent and sharp corners. No distractions.",
       "author": "Harold Masselink",
       "tags": ["dark", "light", "flat", "minimal", "blue"],
-      "path": "shared-themes/blueongrey",
+      "path": "themes/blueongrey",
       "files": ["theme.json"],
-      "previewDark": "shared-themes/blueongrey/preview-dark.png",
-      "previewLight": "shared-themes/blueongrey/preview-light.png"
+      "previewDark": "themes/blueongrey/preview-dark.png",
+      "previewLight": "themes/blueongrey/preview-light.png"
     },
     {
       "id": "highcontrast",
@@ -54,10 +54,10 @@
       "description": "True high-contrast theme for low-vision use — black/white with strong, vivid accents.",
       "author": "Harold Masselink",
       "tags": ["dark", "light", "high-contrast", "accessibility", "bold"],
-      "path": "shared-themes/highcontrast",
+      "path": "themes/highcontrast",
       "files": ["theme.json"],
-      "previewDark": "shared-themes/highcontrast/preview-dark.png",
-      "previewLight": "shared-themes/highcontrast/preview-light.png"
+      "previewDark": "themes/highcontrast/preview-dark.png",
+      "previewLight": "themes/highcontrast/preview-light.png"
     },
     {
       "id": "glass",
@@ -65,10 +65,10 @@
       "description": "Frosted-glass look — a translucent window with see-through panels and soft rounded corners.",
       "author": "Harold Masselink",
       "tags": ["dark", "light", "translucent", "glass", "modern"],
-      "path": "shared-themes/glass",
+      "path": "themes/glass",
       "files": ["theme.json"],
-      "previewDark": "shared-themes/glass/preview-dark.png",
-      "previewLight": "shared-themes/glass/preview-light.png"
+      "previewDark": "themes/glass/preview-dark.png",
+      "previewLight": "themes/glass/preview-light.png"
     }
   ]
 }

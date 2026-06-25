@@ -2,7 +2,7 @@
 
 > **Hand this whole file to a fresh Claude session** whose working directory is a clone of
 > <https://github.com/masselink/MasselGUARD-themes>. It is a complete, self-contained spec
-> for laying out the shared-themes repository so the MasselGUARD app can download themes
+> for laying out the themes repository so the MasselGUARD app can download themes
 > **without** pulling a repository `.zip` — each theme's files are fetched individually over
 > raw HTTPS. Fonts and images are first-class parts of a theme.
 
@@ -22,7 +22,7 @@ folder per theme.
 /                         (repo root)
   index.json              ← manifest; the app reads this FIRST
   README.md               ← human description (not downloaded by the app)
-  shared-themes/
+  themes/
     <theme-id>/           ← one folder per theme; <theme-id> is lowercase, no spaces
       theme.json          ← REQUIRED — the theme definition
       logo.png            ← optional image asset
@@ -55,7 +55,7 @@ Root-level file the app downloads first. Schema:
       "description": "Cyberpunk dual-variant theme with a neon accent.",
       "author": "masselink",
       "tags": ["dark", "light", "neon", "cyberpunk", "high-contrast"],
-      "path": "shared-themes/neon-night",
+      "path": "themes/neon-night",
       "files": [
         "theme.json",
         "logo.png",
@@ -63,8 +63,8 @@ Root-level file the app downloads first. Schema:
         "Orbitron-Regular.ttf",
         "Orbitron-Bold.ttf"
       ],
-      "previewDark":  "shared-themes/neon-night/preview-dark.png",
-      "previewLight": "shared-themes/neon-night/preview-light.png"
+      "previewDark":  "themes/neon-night/preview-dark.png",
+      "previewLight": "themes/neon-night/preview-light.png"
     }
   ]
 }
@@ -76,12 +76,12 @@ Field rules:
 |---|---|---|
 | `schema` | yes | Manifest version. Use `1`. |
 | `themes[]` | yes | One entry per theme. |
-| `id` | yes | Install folder name. Lowercase, `[a-z0-9-]`, no spaces. Must match the folder under `shared-themes/`. |
+| `id` | yes | Install folder name. Lowercase, `[a-z0-9-]`, no spaces. Must match the folder under `themes/`. |
 | `name` | yes | Display name (any language/script). |
 | `description` | no | One-line description (shown on the browser card). |
 | `author` | no | Credit (shown as "by …"). |
 | `tags[]` | recommended | Short lowercase keywords for the browser's filter chips + search (e.g. `dark`, `light`, `minimal`, `high-contrast`, `colorful`, `translucent`). Include `dark` and/or `light` to say which variants the theme ships. |
-| `path` | yes | Theme folder relative to repo root, e.g. `shared-themes/neon-night`. |
+| `path` | yes | Theme folder relative to repo root, e.g. `themes/neon-night`. |
 | `files[]` | yes | **Every file the app must download**, relative to `path`. MUST include `theme.json` and **every font and image the theme references**. If it isn't listed here it won't be downloaded. |
 | `previewDark` | recommended | Repo-root-relative screenshot of the theme's **dark** variant, shown on the browser card. Not installed into the theme folder. |
 | `previewLight` | recommended | Repo-root-relative screenshot of the theme's **light** variant. The browser's Dark/Light header toggle switches between the two; if only one is supplied it is shown for both. |
@@ -103,7 +103,7 @@ header** that flips every card between its `previewDark` and `previewLight` imag
 - The card preview area is ~272 × 158 px and scales the image with `UniformToFill`. Supply a
   **16:10-ish landscape PNG/JPG** (e.g. 640 × 400 or larger); keep each well under a few
   hundred KB so the grid loads quickly.
-- Keep preview files inside the theme's folder (e.g. `shared-themes/<id>/preview-dark.png`) so the
+- Keep preview files inside the theme's folder (e.g. `themes/<id>/preview-dark.png`) so the
   repo stays tidy, and reference them by their repo-root-relative path.
 
 ## 4. How the app consumes it (so you populate it correctly)
@@ -116,19 +116,19 @@ This is **implemented** in the app (Settings → Appearance → **Browse…**). 
 2. Renders a card per theme — `previewDark`/`previewLight` image (Dark/Light header toggle),
    `name`, `author`, `description`, `tags` chips + search.
 3. On **Install**, for each `f` in `t.files`:
-   `GET …/main/{t.path}/{f}` → save to `<install>/shared-themes/{t.id}/{f}`.
+   `GET …/main/{t.path}/{f}` → save to `<install>/themes/{t.id}/{f}`.
 
 So: **filenames are case-sensitive** on raw.githubusercontent.com, paths are forward-slash,
 and the default branch should be `main` (`master` also works). The app validates `id` and each
-file path and will skip anything that tries to escape `shared-themes/<id>/`.
+file path and will skip anything that tries to escape `themes/<id>/`.
 
 ## 5. The `theme.json` format
 
 Themes use MasselGUARD's **unified dual-variant** format: structural settings at the root,
 colours split into `"dark"` and `"light"` sections. The full key reference lives in the app
-repo at [`shared-themes/THEME_INFO.md`](https://github.com/masselink/MasselGUARD/blob/main/shared-themes/THEME_INFO.md);
+repo at [`themes/THEME_INFO.md`](https://github.com/masselink/MasselGUARD/blob/main/themes/THEME_INFO.md);
 copy concrete, fully-populated examples from the shipped themes
-(`shared-themes/blueongrey/theme.json`, `highcontrast/theme.json`, `glass/theme.json`).
+(`themes/blueongrey/theme.json`, `highcontrast/theme.json`, `glass/theme.json`).
 
 Minimum a good theme should set:
 
@@ -157,7 +157,7 @@ Minimum a good theme should set:
 
 ## 6. Step-by-step for the populating session
 
-1. Create `shared-themes/<id>/` for each theme; author `theme.json` (start from a shipped example,
+1. Create `themes/<id>/` for each theme; author `theme.json` (start from a shipped example,
    keep all asset references relative and flat).
 2. Add any font/image files into the same folder.
 3. Add 1–2 preview screenshots per theme (`preview-dark.png`, `preview-light.png`) in the
@@ -187,6 +187,6 @@ Minimum a good theme should set:
 
 `Services/ThemeDownloadService.cs` reads `index.json` (`FetchManifestAsync`), fetches preview
 images (`FetchRawAsync`) and installs a theme's `files[]` over raw HTTPS into
-`shared-themes/<id>/` (`InstallThemeAsync`); `Views/ThemeBrowserWindow` is the wide pop-up.
+`themes/<id>/` (`InstallThemeAsync`); `Views/ThemeBrowserWindow` is the wide pop-up.
 A legacy whole-repo `.zip` download path is retained only for arbitrary `.zip`/repo URLs typed
 manually — the manifest path above is the supported route for this repository.
