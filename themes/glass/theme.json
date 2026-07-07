@@ -9,9 +9,7 @@
   "cornerRadius": 10,
   "titleBarHeight": 48,
   "showTitleBarIcon": true,
-  "showTitleBarAppName": true,
-  "showResizeGrip": true,
-  "windowOpacity": 0.85,
+  "showTitleBarAppName": true,  "windowOpacity": 0.85,
   "panelOpacity": 0.45,
   "showStatusBar": true,
   "statusBarHeight": 38,
@@ -49,7 +47,12 @@
     "colorTrayHover": "#2A3040",
     "colorTrayText": "#EAEEF5",
     "colorTrayBorder": "#3A4255",
-    "colorTrayImageMargin": "#1B1F2A"
+    "colorTrayImageMargin": "#1B1F2A",
+    "logo": "",
+    "appIcon": "",
+    "backgroundImage": "",
+    "trayIconConnected": "",
+    "trayIconDisconnected": ""
   },
   "light": {
     "colorWindowBg": "#EEF2F8",
@@ -73,6 +76,11 @@
     "colorTrayHover": "#DCE6F4",
     "colorTrayText": "#1A1F2A",
     "colorTrayBorder": "#B6C2D6",
-    "colorTrayImageMargin": "#E3E9F3"
+    "colorTrayImageMargin": "#E3E9F3",
+    "logo": "",
+    "appIcon": "",
+    "backgroundImage": "",
+    "trayIconConnected": "",
+    "trayIconDisconnected": ""
   }
 }

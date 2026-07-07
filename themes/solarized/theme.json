@@ -3,14 +3,15 @@
   "creator": "masselink",
   "description": "Warm, low-glare Solarized palette tuned for long sessions.",
   "appName": "MasselGUARD",
+  "type": "dark",
   "fontFamily": "Segoe UI",
   "fontSize": 12,
   "cornerRadius": 4,
   "titleBarHeight": 48,
   "showTitleBarIcon": true,
   "showTitleBarAppName": true,
-  "showResizeGrip": true,
   "windowOpacity": 1.0,
+  "panelOpacity": 1.0,
   "showStatusBar": true,
   "statusBarHeight": 38,
   "showStatusWifi": true,
@@ -19,6 +20,8 @@
   "backgroundStretch": "stretch",
   "backgroundOpacity": 1.0,
   "appIcon": "",
+  "trayIconConnected": "",
+  "trayIconDisconnected": "",
   "logo": "",
   "logoWidth": 28,
   "logoHeight": 28,
@@ -45,7 +48,12 @@
     "colorTrayHover": "#14505E",
     "colorTrayText": "#EEE8D5",
     "colorTrayBorder": "#14505E",
-    "colorTrayImageMargin": "#002B36"
+    "colorTrayImageMargin": "#002B36",
+    "logo": "",
+    "appIcon": "",
+    "backgroundImage": "",
+    "trayIconConnected": "",
+    "trayIconDisconnected": ""
   },
   "light": {
     "colorWindowBg": "#FDF6E3",
@@ -69,6 +77,11 @@
     "colorTrayHover": "#E6DFC8",
     "colorTrayText": "#073642",
     "colorTrayBorder": "#DDD6C1",
-    "colorTrayImageMargin": "#FDF6E3"
+    "colorTrayImageMargin": "#FDF6E3",
+    "logo": "",
+    "appIcon": "",
+    "backgroundImage": "",
+    "trayIconConnected": "",
+    "trayIconDisconnected": ""
   }
 }

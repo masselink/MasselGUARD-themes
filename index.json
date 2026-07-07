@@ -5,7 +5,7 @@
       "id": "neon-night",
       "name": "Neon Night",
       "description": "Cyberpunk dual-variant theme with a vivid neon accent.",
-      "author": "masselink",
+      "author": "Harold Masselink",
       "tags": ["dark", "light", "neon", "cyberpunk", "high-contrast", "colorful"],
       "path": "themes/neon-night",
       "files": ["theme.json"]
@@ -14,7 +14,7 @@
       "id": "nord-aurora",
       "name": "Nord Aurora",
       "description": "Cool arctic palette with soft frost blues and aurora accents.",
-      "author": "masselink",
+      "author": "Harold Masselink",
       "tags": ["dark", "light", "blue", "cool", "minimal"],
       "path": "themes/nord-aurora",
       "files": ["theme.json"]
@@ -23,7 +23,7 @@
       "id": "solarized",
       "name": "Solarized",
       "description": "Warm, low-glare Solarized palette tuned for long sessions.",
-      "author": "masselink",
+      "author": "Harold Masselink",
       "tags": ["dark", "light", "warm", "low-contrast", "classic"],
       "path": "themes/solarized",
       "files": ["theme.json"]
@@ -32,7 +32,7 @@
       "id": "forest-mist",
       "name": "Forest Mist",
       "description": "Calm forest greens with a soft mossy accent.",
-      "author": "masselink",
+      "author": "Harold Masselink",
       "tags": ["dark", "light", "green", "nature", "calm"],
       "path": "themes/forest-mist",
       "files": ["theme.json"]
