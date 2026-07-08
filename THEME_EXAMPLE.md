@@ -1,6 +1,6 @@
 # MasselGUARD theme — complete example & instructions
 
-A theme is a folder containing **`theme.json`** plus any image/font files it uses. This file
+A theme is a folder containing **`<theme-id>-theme.json`** (e.g. `neon-night-theme.json`) plus any image/font files it uses. This file
 is a copy-paste starting point with **every field populated**, followed by an explanation of
 each one. For the deeper key reference see [`THEME_INFO.md`](THEME_INFO.md); for publishing
 themes to the theme repository see [`SHARED_THEMES_REPO_GUIDE.md`](SHARED_THEMES_REPO_GUIDE.md).
@@ -32,7 +32,7 @@ builder; only System is locked.
 All non-System themes — downloaded *and* self-made — live together, one folder each, in:
 
 ```
-%APPDATA%\MasselGUARD\themes\<theme-id>\theme.json   (+ its images/fonts)
+%APPDATA%\MasselGUARD\themes\<theme-id>\<theme-id>-theme.json   (+ its images/fonts)
 ```
 
 This is per-user, needs no admin rights, and survives app updates and reinstalls. The app
@@ -48,7 +48,7 @@ the builder's Export) — see [`SHARED_THEMES_REPO_GUIDE.md`](SHARED_THEMES_REPO
 > Keep all asset references (`logo`, `backgroundImage`, `appIcon`, tray icons, fonts) as
 > **plain relative filenames in the same folder** — rooted/UNC paths and `..` are rejected.
 
-## `theme.json` — full template
+## `<theme-id>-theme.json` — full template
 
 ```json
 {

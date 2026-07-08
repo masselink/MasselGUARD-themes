@@ -8,7 +8,9 @@
       "author": "Harold Masselink",
       "tags": ["dark", "light", "neon", "cyberpunk", "high-contrast", "colorful"],
       "path": "themes/neon-night",
-      "files": ["theme.json"]
+      "files": ["neon-night-theme.json"],
+      "previewDark": "neon-night-dark.png",
+      "previewLight": "neon-night-light.png"
     },
     {
       "id": "nord-aurora",
@@ -17,7 +19,9 @@
       "author": "Harold Masselink",
       "tags": ["dark", "light", "blue", "cool", "minimal"],
       "path": "themes/nord-aurora",
-      "files": ["theme.json"]
+      "files": ["nord-aurora-theme.json"],
+      "previewDark": "nord-aurora-dark.png",
+      "previewLight": "nord-aurora-light.png"
     },
     {
       "id": "solarized",
@@ -26,7 +30,9 @@
       "author": "Harold Masselink",
       "tags": ["dark", "light", "warm", "low-contrast", "classic"],
       "path": "themes/solarized",
-      "files": ["theme.json"]
+      "files": ["solarized-theme.json"],
+      "previewDark": "solarized-dark.png",
+      "previewLight": "solarized-light.png"
     },
     {
       "id": "forest-mist",
@@ -35,7 +41,9 @@
       "author": "Harold Masselink",
       "tags": ["dark", "light", "green", "nature", "calm"],
       "path": "themes/forest-mist",
-      "files": ["theme.json"]
+      "files": ["forest-mist-theme.json"],
+      "previewDark": "forest-mist-dark.png",
+      "previewLight": "forest-mist-light.png"
     },
     {
       "id": "blueongrey",
@@ -44,9 +52,9 @@
       "author": "Harold Masselink",
       "tags": ["dark", "light", "flat", "minimal", "blue"],
       "path": "themes/blueongrey",
-      "files": ["theme.json"],
-      "previewDark": "themes/blueongrey/preview-dark.png",
-      "previewLight": "themes/blueongrey/preview-light.png"
+      "files": ["blueongrey-theme.json"],
+      "previewDark": "blueongrey-dark.png",
+      "previewLight": "blueongrey-light.png"
     },
     {
       "id": "highcontrast",
@@ -55,9 +63,9 @@
       "author": "Harold Masselink",
       "tags": ["dark", "light", "high-contrast", "accessibility", "bold"],
       "path": "themes/highcontrast",
-      "files": ["theme.json"],
-      "previewDark": "themes/highcontrast/preview-dark.png",
-      "previewLight": "themes/highcontrast/preview-light.png"
+      "files": ["highcontrast-theme.json"],
+      "previewDark": "highcontrast-dark.png",
+      "previewLight": "highcontrast-light.png"
     },
     {
       "id": "glass",
@@ -66,9 +74,9 @@
       "author": "Harold Masselink",
       "tags": ["dark", "light", "translucent", "glass", "modern"],
       "path": "themes/glass",
-      "files": ["theme.json"],
-      "previewDark": "themes/glass/preview-dark.png",
-      "previewLight": "themes/glass/preview-light.png"
+      "files": ["glass-theme.json"],
+      "previewDark": "glass-dark.png",
+      "previewLight": "glass-light.png"
     }
   ]
 }

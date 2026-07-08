@@ -14,8 +14,8 @@ the files of the theme(s) the user installs. See
 index.json            manifest the app reads first
 themes/
   <theme-id>/
-    theme.json        the theme definition (required)
-    <assets…>         optional fonts/images, flat in the folder
+    <theme-id>-theme.json   the theme definition (required, e.g. neon-night-theme.json)
+    <assets…>               optional fonts/images, flat in the folder
 ```
 
 ## Available themes
@@ -33,13 +33,14 @@ In the app: **Settings → Appearance → Browse…**, pick a theme, and click *
 
 ## Adding a theme
 
-1. Create `themes/<id>/theme.json` (start from one of the themes here; keep every asset
+1. Create `themes/<id>/<id>-theme.json` (start from one of the themes here; keep every asset
    reference a plain relative filename, flat in the folder).
 2. Add any fonts/images into the same folder.
 3. Add an entry to [`index.json`](index.json) listing **every** file the app must download
-   (`theme.json` plus all referenced fonts/images) and its `tags`.
-4. Optionally add `preview-dark.png` / `preview-light.png` to the folder and reference them via
-   `previewDark` / `previewLight` (these are shown in the browser, not installed).
+   (the `<id>-theme.json` file plus all referenced fonts/images) and its `tags`.
+4. Optionally add preview screenshots (e.g. `<id>-dark.png` / `<id>-light.png`) to the folder
+   and reference them via `previewDark` / `previewLight` — paths are **relative to the theme
+   folder** (these are shown in the browser, not installed).
 5. Commit to `main`.
 
 The theme file format and full key reference are documented in

@@ -24,7 +24,7 @@ folder per theme.
   README.md               ← human description (not downloaded by the app)
   themes/
     <theme-id>/           ← one folder per theme; <theme-id> is lowercase, no spaces
-      theme.json          ← REQUIRED — the theme definition
+      <theme-id>-theme.json  ← REQUIRED — the theme definition (e.g. neon-night-theme.json)
       logo.png            ← optional image asset
       bg.jpg              ← optional background image
       tray-connected.ico  ← optional tray icons
@@ -57,14 +57,14 @@ Root-level file the app downloads first. Schema:
       "tags": ["dark", "light", "neon", "cyberpunk", "high-contrast"],
       "path": "themes/neon-night",
       "files": [
-        "theme.json",
+        "neon-night-theme.json",
         "logo.png",
         "bg.jpg",
         "Orbitron-Regular.ttf",
         "Orbitron-Bold.ttf"
       ],
-      "previewDark":  "themes/neon-night/preview-dark.png",
-      "previewLight": "themes/neon-night/preview-light.png"
+      "previewDark":  "preview-dark.png",
+      "previewLight": "preview-light.png"
     }
   ]
 }
@@ -82,13 +82,13 @@ Field rules:
 | `author` | no | Credit (shown as "by …"). |
 | `tags[]` | recommended | Short lowercase keywords for the browser's filter chips + search (e.g. `dark`, `light`, `minimal`, `high-contrast`, `colorful`, `translucent`). Include `dark` and/or `light` to say which variants the theme ships. |
 | `path` | yes | Theme folder relative to repo root, e.g. `themes/neon-night`. |
-| `files[]` | yes | **Every file the app must download**, relative to `path`. MUST include `theme.json` and **every font and image the theme references**. If it isn't listed here it won't be downloaded. |
-| `previewDark` | recommended | Repo-root-relative screenshot of the theme's **dark** variant, shown on the browser card. Not installed into the theme folder. |
-| `previewLight` | recommended | Repo-root-relative screenshot of the theme's **light** variant. The browser's Dark/Light header toggle switches between the two; if only one is supplied it is shown for both. |
+| `files[]` | yes | **Every file the app must download**, relative to `path`. MUST include the theme definition file (`<id>-theme.json`, e.g. `neon-night-theme.json`) and **every font and image the theme references**. If it isn't listed here it won't be downloaded. |
+| `previewDark` | recommended | Screenshot of the theme's **dark** variant, shown on the browser card. **Relative to `path`** — just the filename (e.g. `preview-dark.png`), or a sub-path (e.g. `preview/preview-dark.png`). A leading `/` is allowed and ignored. Do **not** repeat the `themes/<id>/` prefix. Not installed into the theme folder. |
+| `previewLight` | recommended | Screenshot of the theme's **light** variant, resolved the same way (relative to `path`). The browser's Dark/Light header toggle switches between the two; if only one is supplied it is shown for both. |
 
 **The `files[]` list is the contract.** The downloader does not crawl the folder — it fetches
 exactly the files you list. Forgetting a font or background image means that theme installs
-broken. Double-check every filename referenced inside `theme.json` appears in `files[]`.
+broken. Double-check every filename referenced inside the theme file appears in `files[]`.
 (Preview images are referenced by `previewDark`/`previewLight` and are *not* part of
 `files[]` — they are displayed in the browser, never installed.)
 
@@ -103,8 +103,11 @@ header** that flips every card between its `previewDark` and `previewLight` imag
 - The card preview area is ~272 × 158 px and scales the image with `UniformToFill`. Supply a
   **16:10-ish landscape PNG/JPG** (e.g. 640 × 400 or larger); keep each well under a few
   hundred KB so the grid loads quickly.
-- Keep preview files inside the theme's folder (e.g. `themes/<id>/preview-dark.png`) so the
-  repo stays tidy, and reference them by their repo-root-relative path.
+- Keep preview files inside the theme's folder so the repo stays tidy, and reference them
+  **relative to the theme's `path`**: e.g. `"previewDark": "preview-dark.png"`, or
+  `"previewDark": "preview/preview-dark.png"` if you nest them in a sub-folder. A leading
+  slash (`/preview/preview-dark.png`) is accepted and resolves identically. The `themes/<id>/`
+  base is implied by `path`, so don't include it here.
 
 ## 4. How the app consumes it (so you populate it correctly)
 
@@ -122,13 +125,16 @@ So: **filenames are case-sensitive** on raw.githubusercontent.com, paths are for
 and the default branch should be `main` (`master` also works). The app validates `id` and each
 file path and will skip anything that tries to escape `themes/<id>/`.
 
-## 5. The `theme.json` format
+## 5. The theme file (`<id>-theme.json`) format
 
-Themes use MasselGUARD's **unified dual-variant** format: structural settings at the root,
-colours split into `"dark"` and `"light"` sections. The full key reference lives in the app
-repo at [`themes/THEME_INFO.md`](https://github.com/masselink/MasselGUARD/blob/main/themes/THEME_INFO.md);
+The theme definition file is named `<theme-id>-theme.json` (e.g. `neon-night-theme.json`) and
+lives at the root of the theme's folder. It uses MasselGUARD's **unified dual-variant** format:
+structural settings at the root, colours split into `"dark"` and `"light"` sections. The full
+key reference lives in the app repo at
+[`themes/THEME_INFO.md`](https://github.com/masselink/MasselGUARD/blob/main/themes/THEME_INFO.md);
 copy concrete, fully-populated examples from the shipped themes
-(`themes/blueongrey/theme.json`, `highcontrast/theme.json`, `glass/theme.json`).
+(`themes/blueongrey/blueongrey-theme.json`, `highcontrast/highcontrast-theme.json`,
+`glass/glass-theme.json`).
 
 Minimum a good theme should set:
 
@@ -157,24 +163,25 @@ Minimum a good theme should set:
 
 ## 6. Step-by-step for the populating session
 
-1. Create `themes/<id>/` for each theme; author `theme.json` (start from a shipped example,
+1. Create `themes/<id>/` for each theme; author `<id>-theme.json` (start from a shipped example,
    keep all asset references relative and flat).
 2. Add any font/image files into the same folder.
-3. Add 1–2 preview screenshots per theme (`preview-dark.png`, `preview-light.png`) in the
+3. Add 1–2 preview screenshots per theme (e.g. `<id>-dark.png`, `<id>-light.png`) in the
    theme folder.
 4. Build/refresh `index.json` so each theme entry lists **every** file in its folder that the
-   app needs (`theme.json` + all referenced fonts/images) plus `tags`, `previewDark` and
-   `previewLight`.
+   app needs (the `<id>-theme.json` file + all referenced fonts/images) plus `tags`,
+   `previewDark` and `previewLight`.
 5. Validate (see checklist) and commit to the **`main`** branch.
 
 ## 7. Validation checklist (must all pass)
 
 - [ ] `index.json` at repo root, `schema: 1`, parses.
-- [ ] Each `themes[].path` folder exists and contains `theme.json`.
-- [ ] Each `files[]` entry exists (case-sensitive) and includes `theme.json`.
-- [ ] Every font/image named in a `theme.json` is in that theme's `files[]`.
-- [ ] `previewDark`/`previewLight` paths (when set) exist and point inside the theme folder;
-      they are **not** in `files[]`.
+- [ ] Each `themes[].path` folder exists and contains its `<id>-theme.json`.
+- [ ] Each `files[]` entry exists (case-sensitive) and includes the theme file (`<id>-theme.json`).
+- [ ] Every font/image named in a theme file is in that theme's `files[]`.
+- [ ] `previewDark`/`previewLight` (when set) are **relative to `path`** (filename or sub-path,
+      not the `themes/<id>/` prefix), resolve to a file that exists inside the theme folder, and
+      are **not** in `files[]`.
 - [ ] `tags` are short lowercase keywords; include `dark`/`light` to advertise variants.
 - [ ] No `..`, rooted, or UNC asset paths anywhere; `id` is a safe single folder name
       (no separators) and matches the folder, and is unique.
