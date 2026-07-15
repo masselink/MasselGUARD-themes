@@ -5,7 +5,7 @@
   "appName": "UniFi",
   "type": "light",
   "fontFamily": "Lato",
-  "headerFontFamily": "",
+  "headerFontFamily": "Lato",
   "fontSize": 12,
   "cornerRadius": 8,
   "titleBarHeight": 48,
