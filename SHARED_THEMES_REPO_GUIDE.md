@@ -51,6 +51,7 @@ Root-level file the app downloads first. Schema:
   "themes": [
     {
       "id": "neon-night",
+      "version": "2026-07-15T07:25:58Z",
       "name": "Neon Night",
       "description": "Cyberpunk dual-variant theme with a neon accent.",
       "author": "masselink",
@@ -77,6 +78,7 @@ Field rules:
 | `schema` | yes | Manifest version. Use `1`. |
 | `themes[]` | yes | One entry per theme. |
 | `id` | yes | Install folder name. Lowercase, `[a-z0-9-]`, no spaces. Must match the folder under `themes/`. |
+| `version` | recommended | Change marker for the theme — an **ISO 8601 UTC timestamp** (e.g. `2026-07-15T07:25:58Z`). **Bump it whenever anything in the theme's folder changes** (colours, assets, fonts). The app records the installed value and, when the manifest later shows a newer `version` for an installed theme, offers to re-download it. Compare as a string/date; newer sorts later. |
 | `name` | yes | Display name (any language/script). |
 | `description` | no | One-line description (shown on the browser card). |
 | `author` | no | Credit (shown as "by …"). |
@@ -171,7 +173,9 @@ Minimum a good theme should set:
 4. Build/refresh `index.json` so each theme entry lists **every** file in its folder that the
    app needs (the `<id>-theme.json` file + all referenced fonts/images) plus `tags`,
    `previewDark` and `previewLight`.
-5. Validate (see checklist) and commit to the **`main`** branch.
+5. Set/bump each changed theme's `version` to the current ISO 8601 UTC timestamp so the app
+   knows to offer a re-download.
+6. Validate (see checklist) and commit to the **`main`** branch.
 
 ## 7. Validation checklist (must all pass)
 
@@ -183,6 +187,7 @@ Minimum a good theme should set:
       not the `themes/<id>/` prefix), resolve to a file that exists inside the theme folder, and
       are **not** in `files[]`.
 - [ ] `tags` are short lowercase keywords; include `dark`/`light` to advertise variants.
+- [ ] Each theme has a `version` (ISO 8601 UTC timestamp), bumped whenever its files changed.
 - [ ] No `..`, rooted, or UNC asset paths anywhere; `id` is a safe single folder name
       (no separators) and matches the folder, and is unique.
 - [ ] Fonts are redistributable; `fontFamily` is the family name, font files are at folder root.

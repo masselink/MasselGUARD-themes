@@ -1,10 +1,11 @@
 {
   "name": "Forest Mist",
-  "creator": "masselink",
+  "creator": "Harold Masselink",
   "description": "Calm forest greens with a soft mossy accent.",
   "appName": "MasselGUARD",
   "type": "dark",
   "fontFamily": "Segoe UI",
+  "headerFontFamily": "",
   "fontSize": 12,
   "cornerRadius": 10,
   "titleBarHeight": 48,

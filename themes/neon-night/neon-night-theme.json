@@ -1,10 +1,11 @@
 {
   "name": "Neon Night",
-  "creator": "masselink",
+  "creator": "Harold Masselink",
   "description": "Cyberpunk dual-variant theme with a vivid neon accent.",
   "appName": "MasselGUARD",
   "type": "dark",
   "fontFamily": "Segoe UI",
+  "headerFontFamily": "",
   "fontSize": 12,
   "cornerRadius": 8,
   "titleBarHeight": 48,

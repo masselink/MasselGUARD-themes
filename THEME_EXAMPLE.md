@@ -44,6 +44,40 @@ To **share** a theme, copy its folder into the
 [MasselGUARD-themes](https://github.com/masselink/MasselGUARD-themes) repository (or zip it via
 the builder's Export) — see [`SHARED_THEMES_REPO_GUIDE.md`](SHARED_THEMES_REPO_GUIDE.md).
 
+## The `index.json` manifest & the `version` timestamp
+
+The theme **browser** doesn't read the theme files directly — it reads a single `index.json`
+at the repository root, which lists one entry per theme (name, tags, preview images, and the
+files to download). Each entry also carries a **`version`** — an **ISO 8601 UTC timestamp** that
+acts as a change marker:
+
+```json
+{
+  "schema": 1,
+  "themes": [
+    {
+      "id": "neon-night",
+      "version": "2026-07-15T07:25:58Z",
+      "name": "Neon Night",
+      "description": "Cyberpunk dual-variant theme with a vivid neon accent.",
+      "author": "Your Name",
+      "tags": ["dark", "light", "neon"],
+      "path": "themes/neon-night",
+      "files": ["neon-night-theme.json"],
+      "previewDark": "neon-night-dark.png",
+      "previewLight": "neon-night-light.png"
+    }
+  ]
+}
+```
+
+**Bump `version` to the current timestamp whenever anything in that theme's folder changes**
+(colours, fonts, images). The app remembers the `version` it installed, and when the manifest
+later advertises a **newer** `version` for a theme you already have, it offers to re-download
+the updated theme. `version` lives **only** in `index.json` — not in the theme file itself.
+Full manifest rules (paths, `files[]`, previews) are in
+[`SHARED_THEMES_REPO_GUIDE.md`](SHARED_THEMES_REPO_GUIDE.md).
+
 > JSON has no comments, so the template below is plain JSON — read the field guide under it.
 > Keep all asset references (`logo`, `backgroundImage`, `appIcon`, tray icons, fonts) as
 > **plain relative filenames in the same folder** — rooted/UNC paths and `..` are rejected.

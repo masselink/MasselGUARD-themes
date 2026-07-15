@@ -5,6 +5,7 @@
   "appName": "MasselGUARD",
   "type": "dark",
   "fontFamily": "Segoe UI",
+  "headerFontFamily": "",
   "fontSize": 12,
   "cornerRadius": 10,
   "titleBarHeight": 48,

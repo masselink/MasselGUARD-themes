@@ -1,10 +1,11 @@
 {
   "name": "Solarized",
-  "creator": "masselink",
+  "creator": "Harold Masselink",
   "description": "Warm, low-glare Solarized palette tuned for long sessions.",
   "appName": "MasselGUARD",
   "type": "dark",
   "fontFamily": "Segoe UI",
+  "headerFontFamily": "",
   "fontSize": 12,
   "cornerRadius": 4,
   "titleBarHeight": 48,
