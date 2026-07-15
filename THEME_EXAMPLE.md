@@ -1,9 +1,9 @@
 # MasselGUARD theme — complete example & instructions
 
 A theme is a folder containing **`<theme-id>-theme.json`** (e.g. `neon-night-theme.json`) plus any image/font files it uses. This file
-is a copy-paste starting point with **every field populated**, followed by an explanation of
-each one. For the deeper key reference see [`THEME_INFO.md`](THEME_INFO.md); for publishing
-themes to the theme repository see [`SHARED_THEMES_REPO_GUIDE.md`](SHARED_THEMES_REPO_GUIDE.md).
+is the complete reference — a copy-paste starting point with **every field populated**, the
+`index.json` manifest schema, and a full explanation of every key. For a quicker overview and
+the steps to publish a theme here, see [`README.md`](README.md).
 
 ## How themes work
 
@@ -40,9 +40,9 @@ bundles no themes — the folder starts empty until you download or create one. 
 `custom_themes\` / `shared-themes\` folders from earlier builds are merged in automatically on
 first launch.)
 
-To **share** a theme, copy its folder into the
-[MasselGUARD-themes](https://github.com/masselink/MasselGUARD-themes) repository (or zip it via
-the builder's Export) — see [`SHARED_THEMES_REPO_GUIDE.md`](SHARED_THEMES_REPO_GUIDE.md).
+To **share** a theme, copy its folder into this repository (or zip it via the builder's Export)
+and add an entry to `index.json` — see "Adding or updating a theme" in [`README.md`](README.md)
+for the exact steps.
 
 ## The `index.json` manifest & the `version` timestamp
 
@@ -75,8 +75,19 @@ acts as a change marker:
 (colours, fonts, images). The app remembers the `version` it installed, and when the manifest
 later advertises a **newer** `version` for a theme you already have, it offers to re-download
 the updated theme. `version` lives **only** in `index.json` — not in the theme file itself.
-Full manifest rules (paths, `files[]`, previews) are in
-[`SHARED_THEMES_REPO_GUIDE.md`](SHARED_THEMES_REPO_GUIDE.md).
+
+Manifest field rules:
+
+| Field | Required | Rules |
+|---|---|---|
+| `schema` | yes | Manifest version — use `1`. |
+| `id` | yes | Install folder name. Lowercase, `[a-z0-9-]`, no spaces. Must match the folder under `themes/`. |
+| `version` | recommended | ISO 8601 UTC timestamp; bump on every change to the theme's folder. |
+| `name` / `description` / `author` | no | Shown on the browser card. |
+| `tags` | no | Short lowercase keywords; include `dark`/`light` to advertise variants. |
+| `path` | yes | `themes/<id>` — relative to the repo root. |
+| `files` | yes | **Every** file the app must download: the `<id>-theme.json` plus all referenced fonts/images (relative to `path`, not the `themes/<id>/` prefix), and each must exist in the theme folder. Preview images are **not** listed here. |
+| `previewDark` / `previewLight` | no | Filenames relative to the theme folder, shown in the browser only (not installed). |
 
 > JSON has no comments, so the template below is plain JSON — read the field guide under it.
 > Keep all asset references (`logo`, `backgroundImage`, `appIcon`, tray icons, fonts) as
@@ -93,6 +104,7 @@ Full manifest rules (paths, `files[]`, previews) are in
   "type": "dark",
 
   "fontFamily": "Segoe UI",
+  "headerFontFamily": "",
   "fontSize": 12,
   "cornerRadius": 6,
 
@@ -191,7 +203,8 @@ Full manifest rules (paths, `files[]`, previews) are in
 | `appName` | string | Name shown in the title bar and toast notifications (usually `MasselGUARD`). |
 | `type` | `"dark"` / `"light"` | Default variant for a legacy single-variant theme; with both `dark`+`light` present it just hints the starting variant. |
 | `fontFamily` | string | Font **family name** (e.g. `Segoe UI`). If you ship a `.ttf`/`.otf` in the folder, use its family name and the app loads it as a private font (no install needed). |
-| `fontSize` | number | Base point size (8–18). |
+| `headerFontFamily` | string | Font family used for the title bar app name and section/column headers. Leave empty (`""`) to inherit `fontFamily` — most themes should. |
+| `fontSize` | number | Base point size (8–18). Also drives three derived sizes used throughout the app: a smaller "Small" and "Tiny" tier (base −1 / −2) for compact labels, and a larger "Header" tier (base +2) for the title bar and section headers. |
 | `cornerRadius` | number | Corner rounding in px (0 = sharp). |
 | `titleBarHeight` | number | Title-bar height (min 32). |
 | `showTitleBarIcon` / `showTitleBarAppName` | bool | Title-bar element visibility. |
