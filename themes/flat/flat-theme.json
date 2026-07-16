@@ -5,7 +5,7 @@
   "appName": "MasselGUARD",
   "type": "dark",
   "fontFamily": "Bahnschrift",
-  "headerFontFamily": "",
+  "headerFontFamily": "Bahnschrift",
   "fontSize": 12,
   "cornerRadius": 0,
   "titleBarHeight": 48,

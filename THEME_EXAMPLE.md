@@ -104,7 +104,7 @@ Manifest field rules:
   "type": "dark",
 
   "fontFamily": "Segoe UI",
-  "headerFontFamily": "",
+  "headerFontFamily": "Segoe UI",
   "fontSize": 12,
   "cornerRadius": 6,
 
@@ -203,7 +203,7 @@ Manifest field rules:
 | `appName` | string | Name shown in the title bar and toast notifications (usually `MasselGUARD`). |
 | `type` | `"dark"` / `"light"` | Default variant for a legacy single-variant theme; with both `dark`+`light` present it just hints the starting variant. |
 | `fontFamily` | string | Font **family name** (e.g. `Segoe UI`). If you ship a `.ttf`/`.otf` in the folder, use its family name and the app loads it as a private font (no install needed). |
-| `headerFontFamily` | string | Font family used for the title bar app name and section/column headers. Leave empty (`""`) to inherit `fontFamily` — most themes should. |
+| `headerFontFamily` | string | Font family for the title bar app name and section/column headers. Empty (`""`) falls back to the app **default** font — **populate it** (e.g. the same value as `fontFamily`, or a heavier display face) so headers use the theme's typography rather than the default. |
 | `fontSize` | number | Base point size (8–18). Also drives three derived sizes used throughout the app: a smaller "Small" and "Tiny" tier (base −1 / −2) for compact labels, and a larger "Header" tier (base +2) for the title bar and section headers. |
 | `cornerRadius` | number | Corner rounding in px (0 = sharp). |
 | `titleBarHeight` | number | Title-bar height (min 32). |

@@ -5,7 +5,7 @@
   "appName": "MasselGUARD",
   "type": "dark",
   "fontFamily": "Trebuchet MS",
-  "headerFontFamily": "",
+  "headerFontFamily": "Trebuchet MS",
   "fontSize": 12,
   "cornerRadius": 8,
   "titleBarHeight": 48,

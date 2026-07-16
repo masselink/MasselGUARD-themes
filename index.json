@@ -3,7 +3,7 @@
   "themes": [
     {
       "id": "neon-night",
-      "version": "2026-07-15T13:57:17Z",
+      "version": "2026-07-16T14:29:30Z",
       "name": "Neon Night",
       "description": "Cyberpunk dual-variant theme with a vivid neon accent.",
       "author": "Harold Masselink",
@@ -15,7 +15,7 @@
     },
     {
       "id": "nord-aurora",
-      "version": "2026-07-15T13:57:17Z",
+      "version": "2026-07-16T14:29:30Z",
       "name": "Nord Aurora",
       "description": "Cool arctic palette with soft frost blues and aurora accents.",
       "author": "Harold Masselink",
@@ -27,7 +27,7 @@
     },
     {
       "id": "solarized",
-      "version": "2026-07-15T13:57:17Z",
+      "version": "2026-07-16T14:29:30Z",
       "name": "Solarized",
       "description": "Warm, low-glare Solarized palette tuned for long sessions.",
       "author": "Harold Masselink",
@@ -39,7 +39,7 @@
     },
     {
       "id": "forest-mist",
-      "version": "2026-07-15T13:57:17Z",
+      "version": "2026-07-16T14:29:30Z",
       "name": "Forest Mist",
       "description": "Calm forest greens with a soft mossy accent.",
       "author": "Harold Masselink",
@@ -51,7 +51,7 @@
     },
     {
       "id": "blueongrey",
-      "version": "2026-07-15T13:57:17Z",
+      "version": "2026-07-16T14:29:30Z",
       "name": "Blue on grey",
       "description": "Flat grey theme with a blue accent and sharp corners. No distractions.",
       "author": "Harold Masselink",
@@ -63,7 +63,7 @@
     },
     {
       "id": "highcontrast",
-      "version": "2026-07-15T13:57:17Z",
+      "version": "2026-07-16T14:29:30Z",
       "name": "High Contrast",
       "description": "True high-contrast theme for low-vision use — black/white with strong, vivid accents.",
       "author": "Harold Masselink",
@@ -75,7 +75,7 @@
     },
     {
       "id": "glass",
-      "version": "2026-07-15T13:57:17Z",
+      "version": "2026-07-16T14:29:30Z",
       "name": "Glass",
       "description": "Frosted-glass look — a translucent window with see-through panels and soft rounded corners.",
       "author": "Harold Masselink",
@@ -87,63 +87,75 @@
     },
     {
       "id": "monokai",
-      "version": "2026-07-15T13:57:17Z",
+      "version": "2026-07-16T14:29:30Z",
       "name": "Monokai",
       "description": "The classic Monokai code palette — vivid green, pink and cyan on warm charcoal.",
       "author": "Harold Masselink",
       "tags": ["dark", "light", "monokai", "code", "vivid", "monospace"],
       "path": "themes/monokai",
-      "files": ["monokai-theme.json"]
+      "files": ["monokai-theme.json"],
+      "previewDark": "monokai-dark.png",
+      "previewLight": "monokai-light.png"
     },
     {
       "id": "low-contrast",
-      "version": "2026-07-15T13:57:17Z",
+      "version": "2026-07-16T14:29:30Z",
       "name": "Low Contrast",
       "description": "Soft, muted greys with gentle contrast and a serif face — easy on tired eyes.",
       "author": "Harold Masselink",
       "tags": ["dark", "light", "low-contrast", "muted", "soft", "serif"],
       "path": "themes/low-contrast",
-      "files": ["low-contrast-theme.json"]
+      "files": ["low-contrast-theme.json"],
+      "previewDark": "low-contrast-dark.png",
+      "previewLight": "low-contrast-light.png"
     },
     {
       "id": "flat",
-      "version": "2026-07-15T13:57:17Z",
+      "version": "2026-07-16T14:29:30Z",
       "name": "Flat",
       "description": "Bold flat-UI colours with sharp corners and a crisp industrial sans.",
       "author": "Harold Masselink",
       "tags": ["dark", "light", "flat", "bold", "colorful", "sharp"],
       "path": "themes/flat",
-      "files": ["flat-theme.json"]
+      "files": ["flat-theme.json"],
+      "previewDark": "flat-dark.png",
+      "previewLight": "flat-light.png"
     },
     {
       "id": "dracula",
-      "version": "2026-07-15T13:57:17Z",
+      "version": "2026-07-16T14:29:30Z",
       "name": "Dracula",
       "description": "The iconic Dracula palette — purple, pink and cyan on deep night blue.",
       "author": "Harold Masselink",
       "tags": ["dark", "light", "dracula", "purple", "vivid"],
       "path": "themes/dracula",
-      "files": ["dracula-theme.json"]
+      "files": ["dracula-theme.json"],
+      "previewDark": "dracula-dark.png",
+      "previewLight": "dracula-light.png"
     },
     {
       "id": "red-velvet",
-      "version": "2026-07-15T13:57:17Z",
+      "version": "2026-07-16T14:29:30Z",
       "name": "Red Velvet",
       "description": "Plush deep-crimson velvet with gold accents and a soft napped backdrop.",
       "author": "Harold Masselink",
       "tags": ["dark", "light", "red", "velvet", "luxurious", "background", "serif"],
       "path": "themes/red-velvet",
-      "files": ["red-velvet-theme.json", "red-velvet-dark.jpg", "red-velvet-light.jpg"]
+      "files": ["red-velvet-theme.json", "red-velvet-dark-bck.jpg", "red-velvet-light-bck.jpg"],
+      "previewDark": "red-velvet-dark.png",
+      "previewLight": "red-velvet-light.png"
     },
     {
       "id": "unifi",
-      "version": "2026-07-15T20:11:17Z",
+      "version": "2026-07-16T14:29:30Z",
       "name": "UniFi",
       "description": "UniFi-inspired blue console look. Not affiliated with or endorsed by Ubiquiti; UniFi is a trademark of Ubiquiti Inc.",
       "author": "Harold Masselink",
       "tags": ["dark", "light", "blue", "company", "console", "minimal"],
       "path": "themes/unifi",
-      "files": ["unifi-theme.json", "Lato-Regular.ttf", "OFL.txt", "unifi-logo-light.png", "unifi-logo-dark.png", "unifi.ico", "unifi-tray-connected.ico", "unifi-tray-disconnected.ico"]
+      "files": ["unifi-theme.json", "Lato-Regular.ttf", "OFL.txt", "unifi-logo-light.png", "unifi-logo-dark.png", "unifi.ico", "unifi-tray-connected.ico", "unifi-tray-disconnected.ico"],
+      "previewDark": "unifi-dark.png",
+      "previewLight": "unifi-light.png"
     }
   ]
 }

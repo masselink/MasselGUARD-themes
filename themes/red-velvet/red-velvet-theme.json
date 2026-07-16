@@ -2,7 +2,7 @@
   "name": "Red Velvet",
   "appName": "MasselGUARD",
   "fontFamily": "Georgia",
-  "headerFontFamily": "",
+  "headerFontFamily": "Georgia",
   "fontSize": 12,
   "cornerRadius": 8,
   "backgroundStretch": "stretch",
@@ -44,7 +44,7 @@
     "colorTrayHover": "#661E30",
     "colorTrayText": "#F5E6DC",
     "colorTrayBorder": "#5E1E2C",
-    "backgroundImage": "red-velvet-dark.jpg"
+    "backgroundImage": "red-velvet-dark-bck.jpg"
   },
   "light": {
     "colorWindowBg": "#F7EDE6",
@@ -68,6 +68,6 @@
     "colorTrayHover": "#F3D9D0",
     "colorTrayText": "#3A121A",
     "colorTrayBorder": "#E0C8BE",
-    "backgroundImage": "red-velvet-light.jpg"
+    "backgroundImage": "red-velvet-light-bck.jpg"
   }
 }

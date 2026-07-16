@@ -5,7 +5,7 @@
   "appName": "MasselGUARD",
   "type": "dark",
   "fontFamily": "Cambria",
-  "headerFontFamily": "",
+  "headerFontFamily": "Cambria",
   "fontSize": 13,
   "cornerRadius": 10,
   "titleBarHeight": 48,

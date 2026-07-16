@@ -5,7 +5,7 @@
   "appName": "MasselGUARD",
   "type": "dark",
   "fontFamily": "Consolas",
-  "headerFontFamily": "",
+  "headerFontFamily": "Consolas",
   "fontSize": 12,
   "cornerRadius": 4,
   "titleBarHeight": 48,
