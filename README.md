@@ -3,6 +3,8 @@
 Shared themes for the [MasselGUARD](https://github.com/masselink/MasselGUARD) WireGuard VPN
 client with automations.
 
+<img width="1378" height="967" alt="Screenshot 2026-07-16 211859" src="https://github.com/user-attachments/assets/a5aa9dda-35ed-4622-bd11-a2ac94c60742" />
+
 The MasselGUARD app browses and installs themes directly from this repository over raw HTTPS —
 no repository `.zip` download. The app reads [`index.json`](index.json) first, then fetches only
 the files of the theme(s) the user installs. See [`THEME_EXAMPLE.md`](THEME_EXAMPLE.md) for the
