@@ -156,6 +156,102 @@
       "files": ["unifi-theme.json", "Lato-Regular.ttf", "OFL.txt", "unifi-logo-light.png", "unifi-logo-dark.png", "unifi.ico", "unifi-tray-connected.ico", "unifi-tray-disconnected.ico"],
       "previewDark": "unifi-dark.png",
       "previewLight": "unifi-light.png"
+    },
+    {
+      "id": "aurora-borealis",
+      "version": "2026-08-18T00:00:00Z",
+      "name": "Aurora Borealis",
+      "description": "Northern-lights curtains over a deep night sky, with a luminous teal-green accent.",
+      "author": "Harold Masselink",
+      "tags": ["dark", "light", "blue", "green", "aurora", "background", "nature"],
+      "path": "themes/aurora-borealis",
+      "files": ["aurora-borealis-theme.json", "aurora-borealis-bg-dark.png", "aurora-borealis-bg-light.png"],
+      "previewDark": "aurora-borealis-dark.png",
+      "previewLight": "aurora-borealis-light.png"
+    },
+    {
+      "id": "nebula",
+      "version": "2026-08-18T00:00:00Z",
+      "name": "Nebula",
+      "description": "Deep-space starfield washed with cyan and magenta gas clouds.",
+      "author": "Harold Masselink",
+      "tags": ["dark", "light", "purple", "space", "nebula", "background", "colorful"],
+      "path": "themes/nebula",
+      "files": ["nebula-theme.json", "nebula-bg-dark.png", "nebula-bg-light.png"],
+      "previewDark": "nebula-dark.png",
+      "previewLight": "nebula-light.png"
+    },
+    {
+      "id": "topographic",
+      "version": "2026-08-18T00:00:00Z",
+      "name": "Topographic",
+      "description": "Warm charcoal with faint amber contour lines — a subtle survey-map texture.",
+      "author": "Harold Masselink",
+      "tags": ["dark", "light", "amber", "map", "texture", "background", "minimal"],
+      "path": "themes/topographic",
+      "files": ["topographic-theme.json", "topographic-bg-dark.png", "topographic-bg-light.png"],
+      "previewDark": "topographic-dark.png",
+      "previewLight": "topographic-light.png"
+    },
+    {
+      "id": "circuit",
+      "version": "2026-08-18T00:00:00Z",
+      "name": "Circuit",
+      "description": "Dark board with glowing blue traces and solder nodes — a network/hardware motif.",
+      "author": "Harold Masselink",
+      "tags": ["dark", "light", "blue", "tech", "circuit", "background", "network"],
+      "path": "themes/circuit",
+      "files": ["circuit-theme.json", "circuit-bg-dark.png", "circuit-bg-light.png", "JetBrainsMono.ttf", "OFL.txt"],
+      "previewDark": "circuit-dark.png",
+      "previewLight": "circuit-light.png"
+    },
+    {
+      "id": "synthwave-sunset",
+      "version": "2026-08-18T00:00:00Z",
+      "name": "Synthwave Sunset",
+      "description": "Outrun sun sinking over a neon perspective grid, in hot pink and purple.",
+      "author": "Harold Masselink",
+      "tags": ["dark", "light", "pink", "purple", "synthwave", "retro", "background", "colorful"],
+      "path": "themes/synthwave-sunset",
+      "files": ["synthwave-sunset-theme.json", "synthwave-sunset-bg-dark.png", "synthwave-sunset-bg-light.png", "Orbitron.ttf", "OFL.txt"],
+      "previewDark": "synthwave-sunset-dark.png",
+      "previewLight": "synthwave-sunset-light.png"
+    },
+    {
+      "id": "carbon-fiber",
+      "version": "2026-08-18T00:00:00Z",
+      "name": "Carbon Fiber",
+      "description": "Woven carbon-fibre texture with a sharp red accent — a hardware-appliance look.",
+      "author": "Harold Masselink",
+      "tags": ["dark", "light", "red", "carbon", "texture", "background", "tech"],
+      "path": "themes/carbon-fiber",
+      "files": ["carbon-fiber-theme.json", "carbon-fiber-bg-dark.png", "carbon-fiber-bg-light.png"],
+      "previewDark": "carbon-fiber-dark.png",
+      "previewLight": "carbon-fiber-light.png"
+    },
+    {
+      "id": "alpine-fog",
+      "version": "2026-08-18T00:00:00Z",
+      "name": "Alpine Fog",
+      "description": "Layered mountain ridges dissolving into soft fog — calm slate-blue palette.",
+      "author": "Harold Masselink",
+      "tags": ["dark", "light", "blue", "mountains", "calm", "background", "nature"],
+      "path": "themes/alpine-fog",
+      "files": ["alpine-fog-theme.json", "alpine-fog-bg-dark.png", "alpine-fog-bg-light.png"],
+      "previewDark": "alpine-fog-dark.png",
+      "previewLight": "alpine-fog-light.png"
+    },
+    {
+      "id": "ocean-depth",
+      "version": "2026-08-18T00:00:00Z",
+      "name": "Ocean Depth",
+      "description": "Sunlit rays fading into deep-sea teal, with a bright aqua accent.",
+      "author": "Harold Masselink",
+      "tags": ["dark", "light", "teal", "ocean", "calm", "background", "nature"],
+      "path": "themes/ocean-depth",
+      "files": ["ocean-depth-theme.json", "ocean-depth-bg-dark.png", "ocean-depth-bg-light.png"],
+      "previewDark": "ocean-depth-dark.png",
+      "previewLight": "ocean-depth-light.png"
     }
   ]
 }
