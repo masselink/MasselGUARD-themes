@@ -45,9 +45,15 @@ themes/
 
 ## Available themes
 
+Themes marked 🖼 ship a background image; 🔤 ship a bundled font.
+
 | ID | Name | Variants | Description |
 |---|---|---|---|
+| `alpine-fog` 🖼 | Alpine Fog | dark · light | Layered mountain ridges dissolving into soft fog — calm slate-blue palette. |
+| `aurora-borealis` 🖼 | Aurora Borealis | dark · light | Northern-lights curtains over a deep night sky, with a luminous teal-green accent. |
 | `blueongrey` | Blue on grey | dark · light | Flat grey theme with a blue accent and sharp corners. No distractions. |
+| `carbon-fiber` 🖼 | Carbon Fiber | dark · light | Woven carbon-fibre texture with a sharp red accent — a hardware-appliance look. |
+| `circuit` 🖼🔤 | Circuit | dark · light | Dark board with glowing blue traces and solder nodes — a network/hardware motif (JetBrains Mono). |
 | `dracula` | Dracula | dark · light | The iconic Dracula palette — purple, pink and cyan on deep night blue. |
 | `flat` | Flat | dark · light | Bold flat-UI colours with sharp corners and a crisp industrial sans. |
 | `forest-mist` | Forest Mist | dark · light | Calm forest greens with a soft mossy accent. |
@@ -55,11 +61,15 @@ themes/
 | `highcontrast` | High Contrast | dark · light | True high-contrast theme for low-vision use — black/white with strong, vivid accents. |
 | `low-contrast` | Low Contrast | dark · light | Soft, muted greys with gentle contrast and a serif face — easy on tired eyes. |
 | `monokai` | Monokai | dark · light | The classic Monokai code palette — vivid green, pink and cyan on warm charcoal. |
+| `nebula` 🖼 | Nebula | dark · light | Deep-space starfield washed with cyan and magenta gas clouds. |
 | `neon-night` | Neon Night | dark · light | Cyberpunk theme with a vivid neon accent. |
 | `nord-aurora` | Nord Aurora | dark · light | Cool arctic palette with frost blues and aurora accents. |
-| `red-velvet` | Red Velvet | dark · light | Plush deep-crimson velvet with gold accents and a soft napped backdrop. |
+| `ocean-depth` 🖼 | Ocean Depth | dark · light | Sunlit rays fading into deep-sea teal, with a bright aqua accent. |
+| `red-velvet` 🖼 | Red Velvet | dark · light | Plush deep-crimson velvet with gold accents and a soft napped backdrop. |
 | `solarized` | Solarized | dark · light | Warm, low-glare palette tuned for long sessions. |
-| `unifi` | UniFi | dark · light | UniFi-inspired blue console look. Not affiliated with or endorsed by Ubiquiti; UniFi is a trademark of Ubiquiti Inc. |
+| `synthwave-sunset` 🖼🔤 | Synthwave Sunset | dark · light | Outrun sun sinking over a neon perspective grid, in hot pink and purple (Orbitron). |
+| `topographic` 🖼 | Topographic | dark · light | Warm charcoal with faint amber contour lines — a subtle survey-map texture. |
+| `unifi` 🔤 | UniFi | dark · light | UniFi-inspired blue console look. Not affiliated with or endorsed by Ubiquiti; UniFi is a trademark of Ubiquiti Inc. |
 
 ## Installing a theme
 

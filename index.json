@@ -10,8 +10,8 @@
       "tags": ["dark", "light", "neon", "cyberpunk", "high-contrast", "colorful"],
       "path": "themes/neon-night",
       "files": ["neon-night-theme.json"],
-      "previewDark": "neon-night-dark.png",
-      "previewLight": "neon-night-light.png"
+      "previewDark": "neon-night-dark-preview.png",
+      "previewLight": "neon-night-light-preview.png"
     },
     {
       "id": "nord-aurora",
@@ -22,8 +22,8 @@
       "tags": ["dark", "light", "blue", "cool", "minimal"],
       "path": "themes/nord-aurora",
       "files": ["nord-aurora-theme.json"],
-      "previewDark": "nord-aurora-dark.png",
-      "previewLight": "nord-aurora-light.png"
+      "previewDark": "nord-aurora-dark-preview.png",
+      "previewLight": "nord-aurora-light-preview.png"
     },
     {
       "id": "solarized",
@@ -34,8 +34,8 @@
       "tags": ["dark", "light", "warm", "low-contrast", "classic"],
       "path": "themes/solarized",
       "files": ["solarized-theme.json"],
-      "previewDark": "solarized-dark.png",
-      "previewLight": "solarized-light.png"
+      "previewDark": "solarized-dark-preview.png",
+      "previewLight": "solarized-light-preview.png"
     },
     {
       "id": "forest-mist",
@@ -46,8 +46,8 @@
       "tags": ["dark", "light", "green", "nature", "calm"],
       "path": "themes/forest-mist",
       "files": ["forest-mist-theme.json"],
-      "previewDark": "forest-mist-dark.png",
-      "previewLight": "forest-mist-light.png"
+      "previewDark": "forest-mist-dark-preview.png",
+      "previewLight": "forest-mist-light-preview.png"
     },
     {
       "id": "blueongrey",
@@ -58,8 +58,8 @@
       "tags": ["dark", "light", "flat", "minimal", "blue"],
       "path": "themes/blueongrey",
       "files": ["blueongrey-theme.json"],
-      "previewDark": "blueongrey-dark.png",
-      "previewLight": "blueongrey-light.png"
+      "previewDark": "blueongrey-dark-preview.png",
+      "previewLight": "blueongrey-light-preview.png"
     },
     {
       "id": "highcontrast",
@@ -70,8 +70,8 @@
       "tags": ["dark", "light", "high-contrast", "accessibility", "bold"],
       "path": "themes/highcontrast",
       "files": ["highcontrast-theme.json"],
-      "previewDark": "highcontrast-dark.png",
-      "previewLight": "highcontrast-light.png"
+      "previewDark": "highcontrast-dark-preview.png",
+      "previewLight": "highcontrast-light-preview.png"
     },
     {
       "id": "glass",
@@ -82,8 +82,8 @@
       "tags": ["dark", "light", "translucent", "glass", "modern"],
       "path": "themes/glass",
       "files": ["glass-theme.json"],
-      "previewDark": "glass-dark.png",
-      "previewLight": "glass-light.png"
+      "previewDark": "glass-dark-preview.png",
+      "previewLight": "glass-light-preview.png"
     },
     {
       "id": "monokai",
@@ -94,8 +94,8 @@
       "tags": ["dark", "light", "monokai", "code", "vivid", "monospace"],
       "path": "themes/monokai",
       "files": ["monokai-theme.json"],
-      "previewDark": "monokai-dark.png",
-      "previewLight": "monokai-light.png"
+      "previewDark": "monokai-dark-preview.png",
+      "previewLight": "monokai-light-preview.png"
     },
     {
       "id": "low-contrast",
@@ -106,8 +106,8 @@
       "tags": ["dark", "light", "low-contrast", "muted", "soft", "serif"],
       "path": "themes/low-contrast",
       "files": ["low-contrast-theme.json"],
-      "previewDark": "low-contrast-dark.png",
-      "previewLight": "low-contrast-light.png"
+      "previewDark": "low-contrast-dark-preview.png",
+      "previewLight": "low-contrast-light-preview.png"
     },
     {
       "id": "flat",
@@ -118,8 +118,8 @@
       "tags": ["dark", "light", "flat", "bold", "colorful", "sharp"],
       "path": "themes/flat",
       "files": ["flat-theme.json"],
-      "previewDark": "flat-dark.png",
-      "previewLight": "flat-light.png"
+      "previewDark": "flat-dark-preview.png",
+      "previewLight": "flat-light-preview.png"
     },
     {
       "id": "dracula",
@@ -130,8 +130,8 @@
       "tags": ["dark", "light", "dracula", "purple", "vivid"],
       "path": "themes/dracula",
       "files": ["dracula-theme.json"],
-      "previewDark": "dracula-dark.png",
-      "previewLight": "dracula-light.png"
+      "previewDark": "dracula-dark-preview.png",
+      "previewLight": "dracula-light-preview.png"
     },
     {
       "id": "red-velvet",
@@ -142,8 +142,8 @@
       "tags": ["dark", "light", "red", "velvet", "luxurious", "background", "serif"],
       "path": "themes/red-velvet",
       "files": ["red-velvet-theme.json", "red-velvet-dark-bck.jpg", "red-velvet-light-bck.jpg"],
-      "previewDark": "red-velvet-dark.png",
-      "previewLight": "red-velvet-light.png"
+      "previewDark": "red-velvet-dark-preview.png",
+      "previewLight": "red-velvet-light-preview.png"
     },
     {
       "id": "unifi",
@@ -154,8 +154,8 @@
       "tags": ["dark", "light", "blue", "company", "console", "minimal"],
       "path": "themes/unifi",
       "files": ["unifi-theme.json", "Lato-Regular.ttf", "OFL.txt", "unifi-logo-light.png", "unifi-logo-dark.png", "unifi.ico", "unifi-tray-connected.ico", "unifi-tray-disconnected.ico"],
-      "previewDark": "unifi-dark.png",
-      "previewLight": "unifi-light.png"
+      "previewDark": "unifi-dark-preview.png",
+      "previewLight": "unifi-light-preview.png"
     },
     {
       "id": "aurora-borealis",
@@ -166,8 +166,8 @@
       "tags": ["dark", "light", "blue", "green", "aurora", "background", "nature"],
       "path": "themes/aurora-borealis",
       "files": ["aurora-borealis-theme.json", "aurora-borealis-bg-dark.png", "aurora-borealis-bg-light.png"],
-      "previewDark": "aurora-borealis-dark.png",
-      "previewLight": "aurora-borealis-light.png"
+      "previewDark": "aurora-borealis-dark-preview.png",
+      "previewLight": "aurora-borealis-light-preview.png"
     },
     {
       "id": "nebula",
@@ -178,8 +178,8 @@
       "tags": ["dark", "light", "purple", "space", "nebula", "background", "colorful"],
       "path": "themes/nebula",
       "files": ["nebula-theme.json", "nebula-bg-dark.png", "nebula-bg-light.png"],
-      "previewDark": "nebula-dark.png",
-      "previewLight": "nebula-light.png"
+      "previewDark": "nebula-dark-preview.png",
+      "previewLight": "nebula-light-preview.png"
     },
     {
       "id": "topographic",
@@ -190,8 +190,8 @@
       "tags": ["dark", "light", "amber", "map", "texture", "background", "minimal"],
       "path": "themes/topographic",
       "files": ["topographic-theme.json", "topographic-bg-dark.png", "topographic-bg-light.png"],
-      "previewDark": "topographic-dark.png",
-      "previewLight": "topographic-light.png"
+      "previewDark": "topographic-dark-preview.png",
+      "previewLight": "topographic-light-preview.png"
     },
     {
       "id": "circuit",
@@ -202,8 +202,8 @@
       "tags": ["dark", "light", "blue", "tech", "circuit", "background", "network"],
       "path": "themes/circuit",
       "files": ["circuit-theme.json", "circuit-bg-dark.png", "circuit-bg-light.png", "JetBrainsMono.ttf", "OFL.txt"],
-      "previewDark": "circuit-dark.png",
-      "previewLight": "circuit-light.png"
+      "previewDark": "circuit-dark-preview.png",
+      "previewLight": "circuit-light-preview.png"
     },
     {
       "id": "synthwave-sunset",
@@ -214,8 +214,8 @@
       "tags": ["dark", "light", "pink", "purple", "synthwave", "retro", "background", "colorful"],
       "path": "themes/synthwave-sunset",
       "files": ["synthwave-sunset-theme.json", "synthwave-sunset-bg-dark.png", "synthwave-sunset-bg-light.png", "Orbitron.ttf", "OFL.txt"],
-      "previewDark": "synthwave-sunset-dark.png",
-      "previewLight": "synthwave-sunset-light.png"
+      "previewDark": "synthwave-sunset-dark-preview.png",
+      "previewLight": "synthwave-sunset-light-preview.png"
     },
     {
       "id": "carbon-fiber",
@@ -226,8 +226,8 @@
       "tags": ["dark", "light", "red", "carbon", "texture", "background", "tech"],
       "path": "themes/carbon-fiber",
       "files": ["carbon-fiber-theme.json", "carbon-fiber-bg-dark.png", "carbon-fiber-bg-light.png"],
-      "previewDark": "carbon-fiber-dark.png",
-      "previewLight": "carbon-fiber-light.png"
+      "previewDark": "carbon-fiber-dark-preview.png",
+      "previewLight": "carbon-fiber-light-preview.png"
     },
     {
       "id": "alpine-fog",
@@ -238,8 +238,8 @@
       "tags": ["dark", "light", "blue", "mountains", "calm", "background", "nature"],
       "path": "themes/alpine-fog",
       "files": ["alpine-fog-theme.json", "alpine-fog-bg-dark.png", "alpine-fog-bg-light.png"],
-      "previewDark": "alpine-fog-dark.png",
-      "previewLight": "alpine-fog-light.png"
+      "previewDark": "alpine-fog-dark-preview.png",
+      "previewLight": "alpine-fog-light-preview.png"
     },
     {
       "id": "ocean-depth",
@@ -250,8 +250,8 @@
       "tags": ["dark", "light", "teal", "ocean", "calm", "background", "nature"],
       "path": "themes/ocean-depth",
       "files": ["ocean-depth-theme.json", "ocean-depth-bg-dark.png", "ocean-depth-bg-light.png"],
-      "previewDark": "ocean-depth-dark.png",
-      "previewLight": "ocean-depth-light.png"
+      "previewDark": "ocean-depth-dark-preview.png",
+      "previewLight": "ocean-depth-light-preview.png"
     }
   ]
 }
