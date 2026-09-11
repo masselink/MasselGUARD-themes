@@ -2,6 +2,18 @@
   "schema": 1,
   "themes": [
     {
+      "id": "forking-fox",
+      "version": "2026-09-11T00:00:00Z",
+      "name": "Forking Fox",
+      "description": "The 4.0.0 signature theme — a low-poly fox on warm ember tones, with a rust-orange accent.",
+      "author": "Harold Masselink",
+      "tags": ["dark", "light", "orange", "warm", "background", "mascot", "signature"],
+      "path": "themes/forking-fox",
+      "files": ["forking-fox-theme.json", "forking-fox-logo-dark.png", "forking-fox-logo-light.png", "forking-fox-icon-dark.ico", "forking-fox-icon-light.ico", "forking-fox-bg-dark.png", "forking-fox-bg-light.png", "forking-fox-tray-on-dark.ico", "forking-fox-tray-off-dark.ico", "forking-fox-tray-on-light.ico", "forking-fox-tray-off-light.ico"],
+      "previewDark": "forking-fox-dark-preview.png",
+      "previewLight": "forking-fox-light-preview.png"
+    },
+    {
       "id": "neon-night",
       "version": "2026-07-16T14:29:30Z",
       "name": "Neon Night",
