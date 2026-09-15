@@ -2,6 +2,18 @@
   "schema": 1,
   "themes": [
     {
+      "id": "layered-lynx",
+      "version": "2026-09-15T00:00:00Z",
+      "name": "Layered Lynx",
+      "description": "The 4.1.0 signature theme — a low-poly lynx in the snow: cool slate darks, snow-white, icy-blue accent.",
+      "author": "Harold Masselink",
+      "tags": ["dark", "light", "blue", "cool", "snow", "background", "mascot", "signature"],
+      "path": "themes/layered-lynx",
+      "files": ["layered-lynx-theme.json", "layered-lynx-logo-dark.png", "layered-lynx-logo-light.png", "layered-lynx-icon-dark.ico", "layered-lynx-icon-light.ico", "layered-lynx-bg-dark.png", "layered-lynx-bg-light.png", "layered-lynx-tray-on-dark.ico", "layered-lynx-tray-off-dark.ico", "layered-lynx-tray-on-light.ico", "layered-lynx-tray-off-light.ico"],
+      "previewDark": "layered-lynx-dark-preview.png",
+      "previewLight": "layered-lynx-light-preview.png"
+    },
+    {
       "id": "forking-fox",
       "version": "2026-09-11T00:00:00Z",
       "name": "Forking Fox",
