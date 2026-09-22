@@ -54,7 +54,8 @@
     "appIcon": "",
     "backgroundImage": "synthwave-sunset-bg-dark.png",
     "trayIconConnected": "",
-    "trayIconDisconnected": ""
+    "trayIconDisconnected": "",
+    "colorDnsBadge": "#FF4FA3"
   },
   "light": {
     "colorWindowBg": "#FBEDF6",
@@ -83,6 +84,10 @@
     "appIcon": "",
     "backgroundImage": "synthwave-sunset-bg-light.png",
     "trayIconConnected": "",
-    "trayIconDisconnected": ""
-  }
+    "trayIconDisconnected": "",
+    "colorDnsBadge": "#C21E74"
+  },
+  "dnsBadgePath": "M12 2 L20 5 L20 11 C20 16 16.4 19.6 12 21 C7.6 19.6 4 16 4 11 L4 5 Z",
+  "dnsBadgeSize": 45,
+  "dnsBadgeLocation": "top-right"
 }

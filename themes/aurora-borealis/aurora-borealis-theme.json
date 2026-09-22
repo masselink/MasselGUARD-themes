@@ -54,7 +54,8 @@
     "appIcon": "",
     "backgroundImage": "aurora-borealis-bg-dark.png",
     "trayIconConnected": "",
-    "trayIconDisconnected": ""
+    "trayIconDisconnected": "",
+    "colorDnsBadge": "#5FE3B3"
   },
   "light": {
     "colorWindowBg": "#EAF3F6",
@@ -83,6 +84,10 @@
     "appIcon": "",
     "backgroundImage": "aurora-borealis-bg-light.png",
     "trayIconConnected": "",
-    "trayIconDisconnected": ""
-  }
+    "trayIconDisconnected": "",
+    "colorDnsBadge": "#1E9E86"
+  },
+  "dnsBadgePath": "M12 2 L19 5 Q20 5.5 20 7 L20 11 C20 16 16.4 19.6 12 21 C7.6 19.6 4 16 4 11 L4 7 Q4 5.5 5 5 Z",
+  "dnsBadgeSize": 50,
+  "dnsBadgeLocation": "bottom-right"
 }

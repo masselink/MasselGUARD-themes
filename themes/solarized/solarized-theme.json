@@ -54,7 +54,8 @@
     "appIcon": "",
     "backgroundImage": "",
     "trayIconConnected": "",
-    "trayIconDisconnected": ""
+    "trayIconDisconnected": "",
+    "colorDnsBadge": "#268BD2"
   },
   "light": {
     "colorWindowBg": "#FDF6E3",
@@ -83,6 +84,10 @@
     "appIcon": "",
     "backgroundImage": "",
     "trayIconConnected": "",
-    "trayIconDisconnected": ""
-  }
+    "trayIconDisconnected": "",
+    "colorDnsBadge": "#268BD2"
+  },
+  "dnsBadgePath": "M6 3 L18 3 Q21 3 21 6 L21 18 Q21 21 18 21 L6 21 Q3 21 3 18 L3 6 Q3 3 6 3 Z",
+  "dnsBadgeSize": 55,
+  "dnsBadgeLocation": "bottom-right"
 }

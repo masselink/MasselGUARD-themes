@@ -129,6 +129,11 @@ Manifest field rules:
   "logoWidth": 28,
   "logoHeight": 28,
 
+  "dnsBadgePath": "M12 2 L20 5 L20 11 C20 16 16.4 19.6 12 21 C7.6 19.6 4 16 4 11 L4 5 Z",
+  "dnsBadgeSize": 45,
+  "dnsBadgeLocation": "bottom-right",
+  "dnsBadgeOpacity": 1.0,
+
   "variables": {},
 
   "dark": {
@@ -154,6 +159,7 @@ Manifest field rules:
     "colorTrayText":        "#E0E0E0",
     "colorTrayBorder":      "#3C3C3C",
     "colorTrayImageMargin": "#242424",
+    "colorDnsBadge":        "#6CA0DC",
     "logo":                 "logo-dark.png",
     "appIcon":              "icon-dark.ico",
     "backgroundImage":      "bg-dark.jpg",
@@ -184,6 +190,7 @@ Manifest field rules:
     "colorTrayText":        "#1C1C1C",
     "colorTrayBorder":      "#BBBBBB",
     "colorTrayImageMargin": "#E4E4E4",
+    "colorDnsBadge":        "#2060B0",
     "logo":                 "logo-light.png",
     "appIcon":              "icon-light.ico",
     "backgroundImage":      "bg-light.jpg",
@@ -218,15 +225,20 @@ Manifest field rules:
 | `trayIconConnected` / `trayIconDisconnected` | filename | Legacy shared fallback for state-specific tray icons — use the per-variant versions below instead. |
 | `logo` | filename | Legacy shared fallback for the title-bar logo — use the per-variant `logo` below instead. |
 | `logoWidth` / `logoHeight` | number | Logo size in px (shared by both variants). |
+| `dnsBadgePath` | SVG path (`d`) | Silhouette of the DNS badge drawn over the tray icon when a DNS profile is active, authored on a **24×24** grid. Empty → the built-in default shield. It's filled with `colorDnsBadge` — the path's own colours are ignored. |
+| `dnsBadgeSize` | number | DNS badge size as a **percentage of the tray icon** (10–100). |
+| `dnsBadgeLocation` | keyword | Where the badge sits over the icon: `top-left`, `top-center`, `top-right`, `middle-left`, `center`, `middle-right`, `bottom-left`, `bottom-center`, `bottom-right`. |
+| `dnsBadgeOpacity` | number | DNS badge opacity, 0.1–1.0 (below 1 the base icon shows through). |
 | `variables` | object | Optional `{ "key": "value" }` custom resources (`Var.key`). Leave `{}` if unused. |
 
 ## Colour keys (set the same set in both `dark` and `light`)
 
-`#RRGGBB` or `#AARRGGBB` (alpha — the leading byte). All 21 keys: `colorWindowBg`,
+`#RRGGBB` or `#AARRGGBB` (alpha — the leading byte). All 22 keys: `colorWindowBg`,
 `colorSurface`, `colorCard`, `colorBorder`, `colorAccent`, `colorSuccess`, `colorDanger`,
 `colorTextPrimary`, `colorTextMuted`, `colorHighlight`, `colorError`, `colorErrorBg`,
 `colorWarning`, `colorWarningBg`, `colorListHover`, `colorListSelected`, `colorLogTimestamp`,
-`colorTrayBg`, `colorTrayHover`, `colorTrayText`, `colorTrayBorder`, `colorTrayImageMargin`.
+`colorTrayBg`, `colorTrayHover`, `colorTrayText`, `colorTrayBorder`, `colorTrayImageMargin`,
+`colorDnsBadge`.
 
 - The timeline derives its tunnel/SSID segment colours from `colorAccent` automatically — you
   do not set those.
@@ -235,6 +247,9 @@ Manifest field rules:
 - Tray colours fall back to main colours when blank (`colorTrayBg`→`colorSurface`,
   `colorTrayHover`→`colorBorder`, `colorTrayText`→`colorTextPrimary`,
   `colorTrayBorder`→`colorBorder`), but populating them explicitly is clearest.
+- `colorDnsBadge` colours the DNS badge drawn over the tray icon (its shape/size/position come
+  from the `dnsBadge*` root fields). Blank → a built-in violet. Setting it per variant lets the
+  badge match each mode — e.g. the same value as that variant's `colorAccent`.
 - `colorListHover`, `colorTrayHover` and `colorHighlight` are the three the builder gives
   dedicated transparency sliders (Transparency section) — the template above ships them with
   an explicit alpha byte (e.g. `#A0303030`) as an example; a plain `#RRGGBB` is just as valid

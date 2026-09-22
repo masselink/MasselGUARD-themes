@@ -54,7 +54,8 @@
     "appIcon": "forking-fox-icon-dark.ico",
     "backgroundImage": "forking-fox-bg-dark.png",
     "trayIconConnected": "forking-fox-tray-on-dark.ico",
-    "trayIconDisconnected": "forking-fox-tray-off-dark.ico"
+    "trayIconDisconnected": "forking-fox-tray-off-dark.ico",
+    "colorDnsBadge": "#EE7A33"
   },
   "light": {
     "colorWindowBg": "#F7F1E8",
@@ -83,6 +84,10 @@
     "appIcon": "forking-fox-icon-light.ico",
     "backgroundImage": "forking-fox-bg-light.png",
     "trayIconConnected": "forking-fox-tray-on-light.ico",
-    "trayIconDisconnected": "forking-fox-tray-off-light.ico"
-  }
+    "trayIconDisconnected": "forking-fox-tray-off-light.ico",
+    "colorDnsBadge": "#C85A22"
+  },
+  "dnsBadgePath": "M12 2 C17.52 2 22 6.48 22 12 C22 17.52 17.52 22 12 22 C6.48 22 2 17.52 2 12 C2 6.48 6.48 2 12 2 Z",
+  "dnsBadgeSize": 45,
+  "dnsBadgeLocation": "top-right"
 }

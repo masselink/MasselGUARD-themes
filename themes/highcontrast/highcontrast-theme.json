@@ -10,7 +10,8 @@
   "cornerRadius": 2,
   "titleBarHeight": 48,
   "showTitleBarIcon": true,
-  "showTitleBarAppName": true,  "windowOpacity": 1.0,
+  "showTitleBarAppName": true,
+  "windowOpacity": 1.0,
   "panelOpacity": 1.0,
   "showStatusBar": true,
   "statusBarHeight": 38,
@@ -53,7 +54,8 @@
     "appIcon": "",
     "backgroundImage": "",
     "trayIconConnected": "",
-    "trayIconDisconnected": ""
+    "trayIconDisconnected": "",
+    "colorDnsBadge": "#FFFF00"
   },
   "light": {
     "colorWindowBg": "#FFFFFF",
@@ -82,6 +84,10 @@
     "appIcon": "",
     "backgroundImage": "",
     "trayIconConnected": "",
-    "trayIconDisconnected": ""
-  }
+    "trayIconDisconnected": "",
+    "colorDnsBadge": "#0000CD"
+  },
+  "dnsBadgePath": "M12 2 L20 5 L20 11 C20 16 16.4 19.6 12 21 C7.6 19.6 4 16 4 11 L4 5 Z",
+  "dnsBadgeSize": 40,
+  "dnsBadgeLocation": "bottom-right"
 }
