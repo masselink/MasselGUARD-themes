@@ -1,54 +1,54 @@
-# MasselGUARD theme — complete example & instructions
+# MasselGUARD theme - complete example & instructions
 
 A theme is a folder containing **`<theme-id>-theme.json`** (e.g. `neon-night-theme.json`) plus any image/font files it uses. This file
-is the complete reference — a copy-paste starting point with **every field populated**, the
+is the complete reference - a copy-paste starting point with **every field populated**, the
 `index.json` manifest schema, and a full explanation of every key. For a quicker overview and
 the steps to publish a theme here, see [`README.md`](README.md).
 
 ## How themes work
 
-MasselGUARD has one theme that's **built in** — **System (Windows colors)**, which follows
+MasselGUARD has one theme that's **built in** - **System (Windows colors)**, which follows
 the live Windows accent + dark/light mode and is read-only. Every other theme is a folder on
 disk and comes from one of two places:
 
-- **Downloaded** — **Settings → Appearance → Download themes…** jumps straight to the
+- **Downloaded** - **Settings → Appearance → Download themes…** jumps straight to the
   community theme browser (or go via **Manage themes… → Community themes** inside the Theme
-  Manager — both open the same browser). It reads the repository's `index.json`, shows a card
+  Manager - both open the same browser). It reads the repository's `index.json`, shows a card
   per theme (preview + tags + search), and installs (or redownloads/overwrites) the ones you
   pick. The default repository is <https://github.com/masselink/MasselGUARD-themes>
   (configurable under **Settings → Advanced → Theme repository**; leave it blank to use the
   default).
-- **Made yourself** — the **Theme Manager** (Settings → Appearance → Manage themes…) creates
+- **Made yourself** - the **Theme Manager** (Settings → Appearance → Manage themes…) creates
   and live-previews themes, or you can drop a folder in by hand. Closing the Manager (or the
   browser) returns you to Settings on the Appearance tab.
 
 Each theme ships **both** a `dark` and `light` colour set; MasselGUARD shows the variant that
 matches your current mode (Settings → Appearance → Light / Dark / Auto). Downloaded and
-self-made themes are treated identically — **all are fully editable and deletable** in the
+self-made themes are treated identically - **all are fully editable and deletable** in the
 builder; only System is locked.
 
 ## Where themes are stored
 
-All non-System themes — downloaded *and* self-made — live together, one folder each, in:
+All non-System themes - downloaded *and* self-made - live together, one folder each, in:
 
 ```
 %APPDATA%\MasselGUARD\themes\<theme-id>\<theme-id>-theme.json   (+ its images/fonts)
 ```
 
 This is per-user, needs no admin rights, and survives app updates and reinstalls. The app
-bundles no themes — the folder starts empty until you download or create one. (Older
+bundles no themes - the folder starts empty until you download or create one. (Older
 `custom_themes\` / `shared-themes\` folders from earlier builds are merged in automatically on
 first launch.)
 
 To **share** a theme, copy its folder into this repository (or zip it via the builder's Export)
-and add an entry to `index.json` — see "Adding or updating a theme" in [`README.md`](README.md)
+and add an entry to `index.json` - see "Adding or updating a theme" in [`README.md`](README.md)
 for the exact steps.
 
 ## The `index.json` manifest & the `version` timestamp
 
-The theme **browser** doesn't read the theme files directly — it reads a single `index.json`
+The theme **browser** doesn't read the theme files directly - it reads a single `index.json`
 at the repository root, which lists one entry per theme (name, tags, preview images, and the
-files to download). Each entry also carries a **`version`** — an **ISO 8601 UTC timestamp** that
+files to download). Each entry also carries a **`version`** - an **ISO 8601 UTC timestamp** that
 acts as a change marker:
 
 ```json
@@ -74,26 +74,26 @@ acts as a change marker:
 **Bump `version` to the current timestamp whenever anything in that theme's folder changes**
 (colours, fonts, images). The app remembers the `version` it installed, and when the manifest
 later advertises a **newer** `version` for a theme you already have, it offers to re-download
-the updated theme. `version` lives **only** in `index.json` — not in the theme file itself.
+the updated theme. `version` lives **only** in `index.json` - not in the theme file itself.
 
 Manifest field rules:
 
 | Field | Required | Rules |
 |---|---|---|
-| `schema` | yes | Manifest version — use `1`. |
+| `schema` | yes | Manifest version - use `1`. |
 | `id` | yes | Install folder name. Lowercase, `[a-z0-9-]`, no spaces. Must match the folder under `themes/`. |
 | `version` | recommended | ISO 8601 UTC timestamp; bump on every change to the theme's folder. |
 | `name` / `description` / `author` | no | Shown on the browser card. |
 | `tags` | no | Short lowercase keywords; include `dark`/`light` to advertise variants. |
-| `path` | yes | `themes/<id>` — relative to the repo root. |
+| `path` | yes | `themes/<id>` - relative to the repo root. |
 | `files` | yes | **Every** file the app must download: the `<id>-theme.json` plus all referenced fonts/images (relative to `path`, not the `themes/<id>/` prefix), and each must exist in the theme folder. Preview images are **not** listed here. |
 | `previewDark` / `previewLight` | no | Filenames relative to the theme folder, shown in the browser only (not installed). |
 
-> JSON has no comments, so the template below is plain JSON — read the field guide under it.
+> JSON has no comments, so the template below is plain JSON - read the field guide under it.
 > Keep all asset references (`logo`, `backgroundImage`, `appIcon`, tray icons, fonts) as
-> **plain relative filenames in the same folder** — rooted/UNC paths and `..` are rejected.
+> **plain relative filenames in the same folder** - rooted/UNC paths and `..` are rejected.
 
-## `<theme-id>-theme.json` — full template
+## `<theme-id>-theme.json` - full template
 
 ```json
 {
@@ -133,6 +133,12 @@ Manifest field rules:
   "dnsBadgeSize": 45,
   "dnsBadgeLocation": "bottom-right",
   "dnsBadgeOpacity": 1.0,
+
+  "iconTunnels": "",
+  "iconDns": "",
+  "iconAutomation": "",
+  "iconCharts": "",
+  "iconLog": "",
 
   "variables": {},
 
@@ -210,38 +216,46 @@ Manifest field rules:
 | `appName` | string | Name shown in the title bar and toast notifications (usually `MasselGUARD`). |
 | `type` | `"dark"` / `"light"` | Default variant for a legacy single-variant theme; with both `dark`+`light` present it just hints the starting variant. |
 | `fontFamily` | string | Font **family name** (e.g. `Segoe UI`). If you ship a `.ttf`/`.otf` in the folder, use its family name and the app loads it as a private font (no install needed). |
-| `headerFontFamily` | string | Font family for the title bar app name and section/column headers. Empty (`""`) falls back to the app **default** font — **populate it** (e.g. the same value as `fontFamily`, or a heavier display face) so headers use the theme's typography rather than the default. |
+| `headerFontFamily` | string | Font family for the title bar app name and section/column headers. Empty (`""`) falls back to the app **default** font - **populate it** (e.g. the same value as `fontFamily`, or a heavier display face) so headers use the theme's typography rather than the default. |
 | `fontSize` | number | Base point size (8–18). Also drives three derived sizes used throughout the app: a smaller "Small" and "Tiny" tier (base −1 / −2) for compact labels, and a larger "Header" tier (base +2) for the title bar and section headers. |
 | `cornerRadius` | number | Corner rounding in px (0 = sharp). |
 | `titleBarHeight` | number | Title-bar height (min 32). |
 | `showTitleBarIcon` / `showTitleBarAppName` | bool | Title-bar element visibility. |
 | `windowOpacity` | number | Whole-window opacity, 0.1–1.0 (the desktop shows through below 1). |
-| `panelOpacity` | number | Panel (Surface/Card) opacity, 0.2–1.0 — lets the window background show through panels (used by the Glass theme). |
+| `panelOpacity` | number | Panel (Surface/Card) opacity, 0.2–1.0 - lets the window background show through panels (used by the Glass theme). |
 | `showStatusBar` / `statusBarHeight` / `showStatusWifi` / `showStatusTunnel` | bool / number | Footer status-bar settings. |
-| `backgroundImage` | filename | Legacy shared fallback for the background image — leave empty and use the per-variant `backgroundImage` below instead. |
-| `backgroundStretch` | `stretch` / `fill` / `center` / `tile` / `topleft` | How the background image is laid out (shared by both variants — it's layout, not colour). |
+| `backgroundImage` | filename | Legacy shared fallback for the background image - leave empty and use the per-variant `backgroundImage` below instead. |
+| `backgroundStretch` | `stretch` / `fill` / `center` / `tile` / `topleft` | How the background image is laid out (shared by both variants - it's layout, not colour). |
 | `backgroundOpacity` | number | Background-image opacity 0–1 (shared by both variants). |
-| `appIcon` | filename | Legacy shared fallback for the taskbar/tray icon (`.ico`/`.png`) — leave empty and use the per-variant `appIcon` below instead. |
-| `trayIconConnected` / `trayIconDisconnected` | filename | Legacy shared fallback for state-specific tray icons — use the per-variant versions below instead. |
-| `logo` | filename | Legacy shared fallback for the title-bar logo — use the per-variant `logo` below instead. |
+| `appIcon` | filename | Legacy shared fallback for the taskbar/tray icon (`.ico`/`.png`) - leave empty and use the per-variant `appIcon` below instead. |
+| `trayIconConnected` / `trayIconDisconnected` | filename | Legacy shared fallback for state-specific tray icons - use the per-variant versions below instead. |
+| `logo` | filename | Legacy shared fallback for the title-bar logo - use the per-variant `logo` below instead. |
 | `logoWidth` / `logoHeight` | number | Logo size in px (shared by both variants). |
-| `dnsBadgePath` | SVG path (`d`) | Silhouette of the DNS badge drawn over the tray icon when a DNS profile is active, authored on a **24×24** grid. Empty → the built-in default shield. It's filled with `colorDnsBadge` — the path's own colours are ignored. |
+| `dnsBadgePath` | SVG path (`d`) | Silhouette of the DNS badge drawn over the tray icon when a DNS profile is active, authored on a **24×24** grid. Empty → the built-in default shield. It's filled with `colorDnsBadge` - the path's own colours are ignored. Holes use the even-odd rule; unlike the section icons, the `F0`/`F1` prefix is **not** supported here. |
 | `dnsBadgeSize` | number | DNS badge size as a **percentage of the tray icon** (10–100). |
 | `dnsBadgeLocation` | keyword | Where the badge sits over the icon: `top-left`, `top-center`, `top-right`, `middle-left`, `center`, `middle-right`, `bottom-left`, `bottom-center`, `bottom-right`. |
 | `dnsBadgeOpacity` | number | DNS badge opacity, 0.1–1.0 (below 1 the base icon shows through). |
+| `iconTunnels` | SVG path (`d`) | Custom **WireGuard** section icon, authored on a **24×24** grid, filled with the section colour (the path's own colours are ignored). Empty → the built-in shield. Applies to the title-bar toggle button, the panel header and the Settings sidebar. The icon is placed on a fixed 24×24 frame (not stretched to its own bounds), so keep the same padding as the built-ins (roughly 2-4 units) to match their size. Editable in the Theme Builder under **Section icons**. Multi-figure paths and the `F0`/`F1` fill-rule prefix are supported (e.g. `F0 …` for even-odd holes). (Added in app 4.5.0.) |
+| `iconDns` | SVG path (`d`) | Custom **DNS** section icon (24×24). Empty → the built-in globe. |
+| `iconAutomation` | SVG path (`d`) | Custom **Automation** section icon (24×24). Empty → the built-in robot. |
+| `iconCharts` | SVG path (`d`) | Custom **Charts / History** section icon (24×24). Empty → the built-in bar-chart. |
+| `iconLog` | SVG path (`d`) | Custom **Activity-log** section icon (24×24). Empty → the built-in hamburger. |
 | `variables` | object | Optional `{ "key": "value" }` custom resources (`Var.key`). Leave `{}` if unused. |
 
 ## Colour keys (set the same set in both `dark` and `light`)
 
-`#RRGGBB` or `#AARRGGBB` (alpha — the leading byte). All 22 keys: `colorWindowBg`,
+`#RRGGBB` or `#AARRGGBB` (alpha - the leading byte). All 22 keys: `colorWindowBg`,
 `colorSurface`, `colorCard`, `colorBorder`, `colorAccent`, `colorSuccess`, `colorDanger`,
 `colorTextPrimary`, `colorTextMuted`, `colorHighlight`, `colorError`, `colorErrorBg`,
 `colorWarning`, `colorWarningBg`, `colorListHover`, `colorListSelected`, `colorLogTimestamp`,
 `colorTrayBg`, `colorTrayHover`, `colorTrayText`, `colorTrayBorder`, `colorTrayImageMargin`,
 `colorDnsBadge`.
 
-- The timeline derives its tunnel/SSID segment colours from `colorAccent` automatically — you
+- The timeline derives its tunnel/SSID segment colours from `colorAccent` automatically - you
   do not set those.
+- `colorLogTimestamp` colours the activity-log times. If it is unset, or reads below **3:1** contrast
+  on `colorCard` (the log background), the app uses `colorTextMuted` instead so times stay readable
+  (app 4.5.0+).
 - Either variant may be omitted entirely; the app auto-generates the missing one by HSL
   lightness inversion. **Shipping both is recommended** for predictable results.
 - Tray colours fall back to main colours when blank (`colorTrayBg`→`colorSurface`,
@@ -249,22 +263,22 @@ Manifest field rules:
   `colorTrayBorder`→`colorBorder`), but populating them explicitly is clearest.
 - `colorDnsBadge` colours the DNS badge drawn over the tray icon (its shape/size/position come
   from the `dnsBadge*` root fields). Blank → a built-in violet. Setting it per variant lets the
-  badge match each mode — e.g. the same value as that variant's `colorAccent`.
+  badge match each mode - e.g. the same value as that variant's `colorAccent`.
 - `colorListHover`, `colorTrayHover` and `colorHighlight` are the three the builder gives
-  dedicated transparency sliders (Transparency section) — the template above ships them with
+  dedicated transparency sliders (Transparency section) - the template above ships them with
   an explicit alpha byte (e.g. `#A0303030`) as an example; a plain `#RRGGBB` is just as valid
   (opaque).
 
 ## Per-variant assets
 
-Every image asset — `logo`, `appIcon`, `backgroundImage`, `trayIconConnected`,
-`trayIconDisconnected` — is **dark/light sensitive by default**: the Theme Builder shows two
+Every image asset - `logo`, `appIcon`, `backgroundImage`, `trayIconConnected`,
+`trayIconDisconnected` - is **dark/light sensitive by default**: the Theme Builder shows two
 independent pickers per asset (Light and Dark) and always writes both into the `dark` / `light`
 sections, as in the template above. A variant's own value wins; the root-level field of the
 same name is only a **legacy fallback** for hand-written themes that ship a single shared
-image (or for a variant that never got its own picture) — set the root field, or one variant,
+image (or for a variant that never got its own picture) - set the root field, or one variant,
 and leave the rest empty to fall back to it. `backgroundStretch`, `backgroundOpacity` and the
-logo's `logoWidth`/`logoHeight` stay shared — they're layout numbers, not images.
+logo's `logoWidth`/`logoHeight` stay shared - they're layout numbers, not images.
 
 ## Try it
 

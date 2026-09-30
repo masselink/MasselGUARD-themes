@@ -1,7 +1,7 @@
 {
   "name": "Circuit",
   "creator": "Harold Masselink",
-  "description": "Dark board with glowing blue traces and solder nodes — a network/hardware motif.",
+  "description": "Dark board with glowing blue traces and solder nodes - a network/hardware motif.",
   "appName": "MasselGUARD",
   "type": "dark",
   "fontFamily": "JetBrains Mono",
