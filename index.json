@@ -7,9 +7,9 @@
       "name": "Copper & Gold",
       "description": "Warm burnished copper on deep brown with gold highlights; the light variant is cream and bronze.",
       "author": "Harold Masselink",
-      "tags": ["dark", "light", "warm", "copper", "gold", "brown", "background", "logo"],
+      "tags": ["dark", "light", "warm", "copper", "gold", "brown", "background", "logo", "icons"],
       "path": "themes/copper-gold",
-      "files": ["copper-gold-theme.json", "copper-gold-logo-dark.png", "copper-gold-logo-light.png", "copper-gold-bg-dark.jpg", "copper-gold-bg-light.jpg"],
+      "files": ["copper-gold-theme.json", "copper-gold-logo-dark.png", "copper-gold-logo-light.png", "copper-gold-bg-dark.jpg", "copper-gold-bg-light.jpg", "copper-gold-icon-dark.ico", "copper-gold-icon-light.ico", "copper-gold-tray-on-dark.ico", "copper-gold-tray-off-dark.ico", "copper-gold-tray-on-light.ico", "copper-gold-tray-off-light.ico"],
       "previewDark": "copper-gold-dark-preview.png",
       "previewLight": "copper-gold-light-preview.png"
     },

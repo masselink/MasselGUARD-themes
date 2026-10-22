@@ -51,10 +51,10 @@
     "colorTrayBorder": "#4D3C2C",
     "colorTrayImageMargin": "#1F1913",
     "logo": "copper-gold-logo-dark.png",
-    "appIcon": "",
+    "appIcon": "copper-gold-icon-dark.ico",
     "backgroundImage": "copper-gold-bg-dark.jpg",
-    "trayIconConnected": "",
-    "trayIconDisconnected": "",
+    "trayIconConnected": "copper-gold-tray-on-dark.ico",
+    "trayIconDisconnected": "copper-gold-tray-off-dark.ico",
     "colorDnsBadge": "#E8C25A"
   },
   "light": {
@@ -81,10 +81,10 @@
     "colorTrayBorder": "#C7AE90",
     "colorTrayImageMargin": "#EFE4D4",
     "logo": "copper-gold-logo-light.png",
-    "appIcon": "",
+    "appIcon": "copper-gold-icon-light.ico",
     "backgroundImage": "copper-gold-bg-light.jpg",
-    "trayIconConnected": "",
-    "trayIconDisconnected": "",
+    "trayIconConnected": "copper-gold-tray-on-light.ico",
+    "trayIconDisconnected": "copper-gold-tray-off-light.ico",
     "colorDnsBadge": "#B8860B"
   },
   "dnsBadgePath": "M12 2 L19 5 Q20 5.5 20 7 L20 11 C20 16 16.4 19.6 12 21 C7.6 19.6 4 16 4 11 L4 7 Q4 5.5 5 5 Z",
