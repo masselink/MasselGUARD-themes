@@ -12,7 +12,7 @@
   "showTitleBarIcon": true,
   "showTitleBarAppName": true,
   "windowOpacity": 1.0,
-  "panelOpacity": 1.0,
+  "panelOpacity": 0.75,
   "showStatusBar": true,
   "statusBarHeight": 38,
   "showStatusWifi": true,
