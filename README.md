@@ -53,6 +53,7 @@ Themes marked 🖼 ship a background image; 🔤 ship a bundled font.
 | `aurora-borealis` 🖼 | Aurora Borealis | dark · light | Northern-lights curtains over a deep night sky, with a luminous teal-green accent. |
 | `blueongrey` | Blue on grey | dark · light | Flat grey theme with a blue accent and sharp corners. No distractions. |
 | `carbon-fiber` 🖼 | Carbon Fiber | dark · light | Woven carbon-fibre texture with a sharp red accent - a hardware-appliance look. |
+| `copper-gold` 🖼 | Copper & Gold | dark · light | Warm burnished copper on deep brown with gold highlights; cream and bronze in light. |
 | `circuit` 🖼🔤 | Circuit | dark · light | Dark board with glowing blue traces and solder nodes - a network/hardware motif (JetBrains Mono). |
 | `dracula` | Dracula | dark · light | The iconic Dracula palette - purple, pink and cyan on deep night blue. |
 | `flat` | Flat | dark · light | Bold flat-UI colours with sharp corners and a crisp industrial sans. |
